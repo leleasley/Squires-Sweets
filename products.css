@@ -1,0 +1,56 @@
+/* Page-specific styles for products.html - focusing on "Ideas for Your Sweet Mix" section */
+
+/* Add spacing above the example mixes section to separate it from the products grid */
+.example-mixes {
+    margin-top: 4rem; /* Adjust this value as needed to move the entire section down */
+    padding: 2rem 0;
+}
+
+/* Ensure the images grid has consistent spacing and moves down slightly more if needed */
+.images-grid {
+    margin-top: 1.5rem; /* Additional top margin to push images down a bit further */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* Style for individual image cards in the mixes section */
+.image-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure mix images are responsive and centered */
+.mix-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-top: 0.5rem; /* Slight top margin on each image for breathing room */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .example-mixes {
+        margin-top: 3rem;
+    }
+    
+    .images-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .mix-img {
+        margin-top: 0.25rem;
+    }
+}
