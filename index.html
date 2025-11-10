@@ -6,12 +6,34 @@
     <title>Squires Sweets - Create Your Perfect Sweet Mix</title>
     <link rel="icon" href="/image/favicon.ico?v=2" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+    
+    <!-- Updated CSP: Allows Facebook SDK + iframe -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://connect.facebook.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https: blob:;
+        connect-src 'self';
+        frame-src 'self' https://www.facebook.com https://web.facebook.com;
+        child-src 'self' https://www.facebook.com https://web.facebook.com;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+    ">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles2233FB.css">
     <script src="script.js"></script>
 </head>
 <body>
+
+    <!-- Facebook SDK - MUST load early -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0"></script>
+
     <!-- Navigation -->
     <nav class="navbar sweet-navbar">
         <div class="nav-container">
@@ -27,12 +49,12 @@
                 <span class="hamburger"></span>
             </button>
             <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link active nav-icon">🏠 Home</a>
-                <a href="products.html" class="nav-link nav-icon">🍬 Products</a>
-                <a href="promo.html" class="nav-link nav-icon">💰 Special Offer</a>
-                <a href="about.html" class="nav-link nav-icon">ℹ️ About</a>
-                <a href="contact.html" class="nav-link nav-icon">✉️ Contact</a>
-                <a href="https://wa.me/447564230269" target="_blank" rel="noopener noreferrer" class="nav-cta">🍭 Order Now</a>
+                <a href="index.html" class="nav-link active nav-icon">Home</a>
+                <a href="products.html" class="nav-link nav-icon">Products</a>
+                <a href="promo.html" class="nav-link nav-icon">Special Offer</a>
+                <a href="about.html" class="nav-link nav-icon">About</a>
+                <a href="contact.html" class="nav-link nav-icon">Contact</a>
+                <a href="https://wa.me/447564230269" target="_blank" rel="noopener noreferrer" class="nav-cta">Order Now</a>
             </div>
         </div>
     </nav>
@@ -97,27 +119,27 @@
 
             <div class="products-preview">
                 <div class="product-card">
-                    <div class="product-image">🍒</div>
+                    <div class="product-image">Fizzy Cola Bottles</div>
                     <h3 class="product-name">Fizzy Cola Bottles</h3>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🍓</div>
+                    <div class="product-image">Strawberry Laces</div>
                     <h3 class="product-name">Strawberry Laces</h3>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🐻</div>
+                    <div class="product-image">Fizzy Bears</div>
                     <h3 class="product-name">Fizzy Bears</h3>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🫘</div>
+                    <div class="product-image">Jelly Beans</div>
                     <h3 class="product-name">Jelly Beans</h3>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🚀</div>
+                    <div class="product-image">Sour Torpedos</div>
                     <h3 class="product-name">Sour Torpedos</h3>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">🥤</div>
+                    <div class="product-image">Giant Fizzy Cola Bottles</div>
                     <h3 class="product-name">Giant Fizzy Cola Bottles</h3>
                 </div>
             </div>
@@ -178,7 +200,7 @@
                     </svg>
                 </a>
             </div>
-            <p class="footer-text">&copy; 2025 Squires Sweets. All rights reserved.</p>
+            <p class="footer-text">© 2025 Squires Sweets. All rights reserved.</p>
             <p class="footer-subtext">Create your perfect sweet mix today!</p>
         </div>
     </footer>
