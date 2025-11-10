@@ -8,28 +8,29 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                    <img src="/image/logo.png" id="Logo" alt="Logo" onerror="this.src='/image/logo.png'; this.onerror=() => console.warn('Failed to load Logo at /image/logo.png')" />
-                    <span class="logo-text">Squires Sweets</span>
-                </a>
-            </div>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span class="hamburger"></span>
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="promo.html" class="nav-link">Special Offer</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link active">Contact</a>
-            </div>
+<nav class="navbar sweet-navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <div class="logo-badge">
+                    <img src="/image/logo.png" id="Logo" alt="Squires Sweets Logo" />
+                </div>
+                <span class="logo-text brand-font">Squires Sweets</span>
+            </a>
         </div>
-    </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger"></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link nav-icon">🏠 Home</a>
+            <a href="products.html" class="nav-link nav-icon">🍬 Products</a>
+            <a href="promo.html" class="nav-link nav-icon">💰 Special Offer</a>
+            <a href="about.html" class="nav-link nav-icon">ℹ️ About</a>
+            <a href="contact.html" class="nav-link active nav-icon">✉️ Contact</a>
+            <a href="https://wa.me/447564230269" target="_blank" rel="noopener noreferrer" class="nav-cta">🍭 Order Now</a>
+        </div>
+    </div>
+</nav>
 
     <!-- Page Header -->
     <section class="page-header">
