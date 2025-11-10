@@ -853,6 +853,98 @@ body {
     }
 }
 
+/* --- SWEET NAVIGATION UPDATE --- */
+.sweet-navbar {
+    background: linear-gradient(90deg, #fbbf24 0%, #ec4899 90%);
+    border-bottom: 4px solid #ec4899;
+    box-shadow: 0 6px 18px -5px rgba(248,164,233,.18);
+}
+.logo-badge {
+    background: radial-gradient(circle, #ffe5e6 60%, #fbbf24 100%);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(251,191,36,.15);
+    margin-right: 0.5rem;
+}
+.brand-font {
+    font-family: 'Fredoka One', 'Baloo', 'Quicksand', Arial, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: #f3127b;
+    text-shadow: 0 1px 0 #fff, 0 2px 2px #fbbf2450;
+}
+.nav-links {
+    gap: 1rem;
+}
+.nav-link,
+.nav-cta {
+    font-size: 1.15rem;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    transition: background .23s, color .15s, box-shadow .2s;
+    display: flex;
+    align-items: center;
+}
+.nav-icon {
+    font-size: 1.18rem;
+}
+.nav-link {
+    color: #fff8ec;
+    background: none;
+    font-weight: 600;
+}
+.nav-link:hover,
+.nav-link.active {
+    background: #fbbf24;
+    color: #ec4899;
+    box-shadow: 0 2px 10px -6px #fbbf24;
+}
+.nav-cta {
+    background: linear-gradient(90deg, #ec4899, #fbbf24);
+    color: #fff;
+    font-weight: bolder;
+    box-shadow: 0 3px 12px -5px #ec4899, 0 2px 6px -2px #fbbf2450;
+    border: none;
+    margin-left: 0.8rem;
+}
+.nav-cta:hover {
+    background: linear-gradient(90deg, #fbbf24 40%, #ec4899 100%);
+    color: #f3127b;
+    box-shadow: 0 6px 18px -5px #fbbf24;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Mobile/Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #fbbf24 60%, #ec4899 100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 9999;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-link, .nav-cta {
+        font-size: 1.3rem;
+        width: 70vw;
+        margin: 0.3rem;
+        justify-content: center; 
+        box-shadow: 0 2px 10px -4px #ec489950;
+    }
+    .mobile-menu-btn {
+        z-index: 10000;
+    }
+}
+
 /* Utility Classes */
 .text-center {
     text-align: center;
