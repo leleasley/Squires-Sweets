@@ -1,0 +1,35 @@
+{
+  "name": "squires-sweets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:css:fix": "stylelint --fix \"**/*.css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leleasley/Squires-Sweets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "lint-staged": {
+    "**/*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/leleasley/Squires-Sweets/issues"
+  },
+  "homepage": "https://github.com/leleasley/Squires-Sweets#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "stylelint": "^17.0.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
