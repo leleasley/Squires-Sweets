@@ -18,10 +18,23 @@ jobs:
         with:
           ruby-version: '3.1'
 
-      - name: Install dependencies
+      - name: Install Ruby dependencies
         run: |
           gem install bundler
           bundle install || true
+
+      - name: Setup Node.js and install JS deps
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install npm dependencies
+        run: |
+          npm ci
+
+      - name: Lint CSS (stylelint)
+        run: |
+          npm run lint:css || true
 
       - name: Build Jekyll site
         run: |
