@@ -3,6 +3,10 @@
   "rules": {
     "max-nesting-depth": 3,
     "selector-max-compound-selectors": 3,
-    "declaration-block-single-line-max-declarations": 3
+    "declaration-block-single-line-max-declarations": 3,
+    "media-feature-range-notation": null,
+    "no-descending-specificity": null,
+    "rule-empty-line-before": ["always-multi-line", {"except": ["first-nested"], "ignore": ["after-comment"]}],
+    "comment-empty-line-before": ["always", {"except": ["first-nested"], "ignore": ["stylelint-commands"]}]
   }
 }

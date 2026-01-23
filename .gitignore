@@ -12,6 +12,9 @@ vendor/
 .DS_Store
 Thumbs.db
 
+node_modules/
+
+
 # IDE
 .vscode/
 .idea/

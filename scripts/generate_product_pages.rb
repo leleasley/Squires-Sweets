@@ -9,13 +9,16 @@ Dir.mkdir('products') unless Dir.exist?('products')
 products.each do |slug, info|
   title = info['name']
   desc = info['description'] || ''
+  og = info['og_image'] || '/image/mix1.png'
+  price = info['price'] || ''
   content = <<~YAML
   ---
   layout: product
   title: "#{title}"
   product: #{slug}
   description: "#{desc}"
-  og_image: /image/mix1.png
+  og_image: #{og}
+  price: "#{price}"
   ---
   YAML
 
