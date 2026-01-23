@@ -53,6 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Hero Carousel
 const carousel = document.querySelector('.carousel-container');
 if (carousel) {
+    const AUTOPLAY_INTERVAL = 5000; // 5 seconds between slides
     const slides = carousel.querySelectorAll('.carousel-slide');
     const prevBtn = carousel.querySelector('.carousel-prev');
     const nextBtn = carousel.querySelector('.carousel-next');
@@ -87,7 +88,7 @@ if (carousel) {
 
     // Start autoplay
     function startAutoplay() {
-        autoplayInterval = setInterval(nextSlide, 5000);
+        autoplayInterval = setInterval(nextSlide, AUTOPLAY_INTERVAL);
     }
 
     // Stop autoplay
