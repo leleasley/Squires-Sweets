@@ -324,8 +324,15 @@ if (carousel) {
         const name = nameEl.innerText.trim();
         const idx = selected.indexOf(name);
         if (idx > -1) {
+            // remove
             selected.splice(idx, 1);
             card.classList.remove('selected');
+            // set undo
+            window._lastMixAction = { type: 'remove', items: [name] };
+            showToast(`${name} removed`, () => {
+                selected.push(name);
+                updateBuilder();
+            });
         } else {
             if (selected.length >= MAX_ITEMS) {
                 alert(`You can only select up to ${MAX_ITEMS} items.`);
@@ -333,6 +340,12 @@ if (carousel) {
             }
             selected.push(name);
             card.classList.add('selected');
+            window._lastMixAction = { type: 'add', items: [name] };
+            showToast(`${name} added`, () => {
+                const i = selected.indexOf(name);
+                if (i > -1) selected.splice(i,1);
+                updateBuilder();
+            });
         }
         updateBuilder();
     }
@@ -352,13 +365,27 @@ if (carousel) {
         } catch (e) {}
     }
 
-    function showToast(msg) {
+    function showToast(msg, undoCallback) {
         const toast = document.getElementById('mixToast');
         if (!toast) return;
-        toast.textContent = msg;
+        // Build message and optional undo button
+        toast.innerHTML = '';
+        const span = document.createElement('span');
+        span.textContent = msg;
+        toast.appendChild(span);
+        if (undoCallback) {
+            const btn = document.createElement('button');
+            btn.className = 'mix-toast-undo';
+            btn.textContent = 'Undo';
+            btn.addEventListener('click', () => {
+                try { undoCallback(); } catch(e) { console.warn('Undo failed', e); }
+                toast.classList.remove('visible');
+            });
+            toast.appendChild(btn);
+        }
         toast.classList.add('visible');
         try { if (window._mixToastTimer) clearTimeout(window._mixToastTimer); } catch(e) {}
-        window._mixToastTimer = setTimeout(() => toast.classList.remove('visible'), 2600);
+        window._mixToastTimer = setTimeout(() => toast.classList.remove('visible'), 6000);
     }
 
     function expandBuilder(doExpand) {
@@ -487,9 +514,16 @@ if (carousel) {
         // Handle clear/message/toggle actions
         document.addEventListener('click', (e) => {
             if (e.target && e.target.id === 'mixClear') {
+                const prev = selected.slice();
                 selected.length = 0;
                 document.querySelectorAll('.product-card.selected').forEach(c => c.classList.remove('selected'));
                 updateBuilder();
+                window._lastMixAction = { type: 'clear', items: prev };
+                showToast('Mix cleared', () => {
+                    // restore previous items
+                    prev.forEach(name => { if (selected.indexOf(name) === -1) selected.push(name); });
+                    updateBuilder();
+                });
             }
 
             if (e.target && (e.target.id === 'mixMessage' || e.target.closest('#mixMessage')) ) {
