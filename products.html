@@ -26,7 +26,7 @@ extra_css:
         <div class="products-grid">
           {% for slug in cat.items %}
             {% assign p = site.data.products.products[slug] %}
-            <a href="{{ site.baseurl }}/product.html#{{ slug }}" class="product-card" aria-label="{{ p.name }}">
+            <a href="{{ site.baseurl }}/products/{{ slug }}" class="product-card" aria-label="{{ p.name }}">
               <div class="product-image">{{ p.emoji }}</div>
               <h3 class="product-name">{{ p.name }}</h3>
             </a>
