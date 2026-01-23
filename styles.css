@@ -1390,9 +1390,28 @@ html {
 /* Ensure the mobile menu button is hidden on larger viewports in case of cascade issues */
 @media (min-width: 769px) {
     .mobile-menu-btn { display: none !important; }
+
     /* make sure nav-links are laid out horizontally on desktop */
     .nav-links { display: flex !important; position: static !important; height: auto !important; background: none !important; padding: 0 !important; box-shadow: none !important; flex-direction: row !important; gap: 1rem !important; }
+
+    /* Desktop nav visual fixes: give the header a subtle warm gradient and darken the links */
+    .sweet-navbar {
+        background: linear-gradient(90deg, #fffaf0 0%, #fff7ff 100%) !important;
+        border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+        box-shadow: 0 4px 18px rgba(3,7,18,0.04) !important;
+    }
+    .sweet-navbar .nav-link {
+        color: #374151 !important; /* dark slate */
+        background: transparent !important;
+    }
+    .sweet-navbar .nav-link:hover,
+    .sweet-navbar .nav-link.active {
+        background: rgba(251,191,36,0.12) !important;
+        color: #b45309 !important;
+    }
+    .sweet-navbar .logo-text, .sweet-navbar .brand-font { color: #111827 !important; }
 }
+
 
 /* Stack features on very small screens */
 @media (max-width: 480px) {
