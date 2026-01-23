@@ -7,7 +7,8 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description }}">
-  <meta property="og:image" content="{{ site.url }}{{ page.og_image | default: '/image/mix1.png' }}">
+  {% assign p = site.data.products.products[page.product] %}
+  <meta property="og:image" content="{{ site.url }}{{ p.og_image | default: page.og_image | default: '/image/mix1.png' }}">
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 </head>
 <body>

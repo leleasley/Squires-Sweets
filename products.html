@@ -29,8 +29,7 @@ extra_css:
             <div id="{{ slug }}" class="product-card">
               <a href="{{ site.baseurl }}/products/{{ slug }}" class="product-link" aria-label="View {{ p.name }}">
                 <div class="product-image">{{ p.emoji }}</div>
-                <h3 class="product-name">{{ p.name }}</h3>
-              </a>
+                <h3 class="product-name">{{ p.name }}</h3>                {% if p.price %}<div class="product-price">{{ p.price }}</div>{% endif %}              </a>
               <button class="card-add" type="button" data-name="{{ p.name }}" aria-label="Add {{ p.name }} to mix">+</button>
             </div>
           {% endfor %}
