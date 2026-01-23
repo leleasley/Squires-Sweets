@@ -203,6 +203,39 @@ if (carousel) {
         document.body.appendChild(toggle);
     }
 
+    function saveSelection() {
+        try {
+            localStorage.setItem('squires_mix', JSON.stringify(selected));
+        } catch (e) {
+            console.warn('Could not save selection', e);
+        }
+    }
+
+    function loadSelection() {
+        try {
+            const raw = localStorage.getItem('squires_mix');
+            if (!raw) return;
+            const arr = JSON.parse(raw);
+            if (!Array.isArray(arr)) return;
+            // Populate selected up to MAX_ITEMS
+            arr.slice(0, MAX_ITEMS).forEach(name => {
+                if (selected.indexOf(name) === -1) selected.push(name);
+            });
+        } catch (e) {
+            console.warn('Could not load stored selection', e);
+        }
+    }
+
+    function expandIfFlagged() {
+        try {
+            const flag = localStorage.getItem('squires_mix_expand');
+            if (flag === '1') {
+                expandBuilder(true);
+                localStorage.removeItem('squires_mix_expand');
+            }
+        } catch (e) { /* ignore */ }
+    }
+
     function updateBuilder() {
         const builder = document.getElementById('mixBuilder');
         const countEl = document.getElementById('mixCount');
@@ -229,6 +262,17 @@ if (carousel) {
             // if already expanded keep state, otherwise stay peek
             if (expanded) builder.classList.add('expanded'); else builder.classList.remove('expanded');
         }
+
+        // mark product cards as selected if they match
+        document.querySelectorAll('.product-card').forEach(c => {
+            const n = c.querySelector('.product-name');
+            if (!n) return;
+            const name = n.innerText.trim();
+            if (selected.indexOf(name) > -1) c.classList.add('selected'); else c.classList.remove('selected');
+        });
+
+        // Persist
+        saveSelection();
     }
 
     function toggleCard(card) {
@@ -267,20 +311,34 @@ if (carousel) {
     document.addEventListener('DOMContentLoaded', () => {
         createBuilder();
 
+        // Load persisted selection and show builder if applicable
+        loadSelection();
+        updateBuilder();
+        expandIfFlagged();
+        // If there is a hash target, scroll it into view
+        if (location.hash) {
+            const el = document.querySelector(location.hash);
+            if (el) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
+
         // Handle clicks for adding items from product grid or product detail
         document.body.addEventListener('click', (e) => {
             // Click on inline Add button in product grid
             const addBtn = e.target.closest && e.target.closest('.card-add');
             if (addBtn) {
                 const card = addBtn.closest('.product-card');
-                if (card) toggleCard(card);
+                if (card) {
+                    toggleCard(card);
+                    updateBuilder();
+                }
                 return;
             }
 
-            // Add from product detail "Add to Mix" button
+            // Add from product detail "Add to Mix" button (redirects to /products)
             const addDetail = e.target.closest && e.target.closest('.add-to-mix');
             if (addDetail) {
                 const name = addDetail.getAttribute('data-name');
+                const slug = addDetail.getAttribute('data-slug');
                 if (!name) return;
                 if (selected.indexOf(name) === -1) {
                     if (selected.length >= MAX_ITEMS) {
@@ -289,12 +347,13 @@ if (carousel) {
                     }
                     selected.push(name);
                 }
-                // Visual feedback: mark any matching card selected
-                document.querySelectorAll('.product-card').forEach(c => {
-                    const n = c.querySelector('.product-name');
-                    if (n && n.innerText.trim() === name) c.classList.add('selected');
-                });
-                updateBuilder();
+                // Persist and redirect to products page (keep mix saved)
+                saveSelection();
+                // flag to expand the sheet on arrival
+                try { localStorage.setItem('squires_mix_expand', '1'); } catch(e) {}
+                // redirect to products list and anchor to the product
+                const target = slug ? `/products#${slug}` : '/products';
+                window.location.href = target;
                 return;
             }
         });
@@ -317,28 +376,6 @@ if (carousel) {
                 const text = lines.join('\n');
                 const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
                 window.open(url, '_blank');
-            }
-
-            // Add from product detail "Add to Mix" button
-            const addBtn = e.target.closest && e.target.closest('.add-to-mix');
-            if (addBtn) {
-                const name = addBtn.getAttribute('data-name');
-                if (!name) return;
-                if (selected.indexOf(name) === -1) {
-                    if (selected.length >= MAX_ITEMS) {
-                        alert(`You can only select up to ${MAX_ITEMS} items.`);
-                        return;
-                    }
-                    selected.push(name);
-                }
-                // Visual feedback: briefly flash the floating toggle
-                const toggleEl = document.getElementById('mixToggle');
-                if (toggleEl) {
-                    toggleEl.classList.add('visible');
-                    setTimeout(()=>toggleEl.classList.add('pulse'), 120);
-                    setTimeout(()=>toggleEl.classList.remove('pulse'), 600);
-                }
-                updateBuilder();
             }
 
             // Toggle expand via floating button

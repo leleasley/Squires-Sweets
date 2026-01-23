@@ -21,7 +21,7 @@
         <div>
           <p style="font-size:1rem;color:#4b5563;">{{ p.description }}</p>
           <div style="margin-top:12px;display:flex;gap:8px;">
-            <button class="btn btn-primary add-to-mix" data-name="{{ p.name }}">Add to Mix</button>
+            <button class="btn btn-primary add-to-mix" data-name="{{ p.name }}" data-slug="{{ page.product }}">Add to Mix</button>
             <a class="btn btn-secondary" href="{{ site.baseurl }}/products">Back to products</a>
           </div>
         </div>
