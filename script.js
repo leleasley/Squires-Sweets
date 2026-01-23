@@ -185,6 +185,7 @@ if (carousel) {
                 </div>
                 <div class="mix-actions">
                     <button class="btn btn-secondary" id="mixClear">Clear</button>
+                    <button class="btn btn-light" id="mixCopy">Copy</button>
                     <button class="btn btn-primary" id="mixMessage">Message</button>
                 </div>
             </div>
@@ -201,6 +202,20 @@ if (carousel) {
         toggle.innerHTML = `<span>View Mix</span><strong id="mixToggleCount" style="margin-left:6px;">0</strong>`;
         toggle.setAttribute('aria-expanded','false');
         document.body.appendChild(toggle);
+
+        // Toast for copy feedback
+        if (!document.getElementById('mixToast')) {
+            const toast = document.createElement('div');
+            toast.id = 'mixToast';
+            toast.className = 'mix-toast';
+            toast.setAttribute('role','status');
+            toast.setAttribute('aria-live','polite');
+            document.body.appendChild(toast);
+        }
+
+        // Auto-collapse timer holder
+        if (typeof window._mixAutoCollapseTimer === 'undefined') window._mixAutoCollapseTimer = null;
+        if (typeof window._mixToastTimer === 'undefined') window._mixToastTimer = null;
     }
 
     function saveSelection() {
@@ -294,6 +309,30 @@ if (carousel) {
         updateBuilder();
     }
 
+    function clearAutoCollapse() {
+        try {
+            if (window._mixAutoCollapseTimer) { clearTimeout(window._mixAutoCollapseTimer); window._mixAutoCollapseTimer = null; }
+        } catch (e) {}
+    }
+
+    function setAutoCollapse() {
+        clearAutoCollapse();
+        try {
+            window._mixAutoCollapseTimer = setTimeout(() => {
+                expandBuilder(false);
+            }, 5000);
+        } catch (e) {}
+    }
+
+    function showToast(msg) {
+        const toast = document.getElementById('mixToast');
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.add('visible');
+        try { if (window._mixToastTimer) clearTimeout(window._mixToastTimer); } catch(e) {}
+        window._mixToastTimer = setTimeout(() => toast.classList.remove('visible'), 2600);
+    }
+
     function expandBuilder(doExpand) {
         const builder = document.getElementById('mixBuilder');
         const toggle = document.getElementById('mixToggle');
@@ -302,9 +341,12 @@ if (carousel) {
         if (expanded) {
             builder.classList.add('expanded');
             toggle.setAttribute('aria-expanded','true');
+            // set auto-collapse timeout
+            setAutoCollapse();
         } else {
             builder.classList.remove('expanded');
             toggle.setAttribute('aria-expanded','false');
+            clearAutoCollapse();
         }
     }
 
@@ -376,6 +418,28 @@ if (carousel) {
                 const text = lines.join('\n');
                 const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
                 window.open(url, '_blank');
+            }
+
+            // Copy message to clipboard
+            if (e.target && (e.target.id === 'mixCopy' || e.target.closest('#mixCopy'))) {
+                if (selected.length === 0) {
+                    alert('Please select at least one sweet to copy.');
+                    return;
+                }
+                const lines = ['Hi! I\'d like to order a custom mix:', ...selected.map(s => `• ${s}`), '', 'Thanks!'];
+                const text = lines.join('\n');
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(() => showToast('Message copied'))
+                    .catch(() => showToast('Could not copy'));
+                } else {
+                    // fallback
+                    const ta = document.createElement('textarea');
+                    ta.value = text;
+                    document.body.appendChild(ta);
+                    ta.select();
+                    try { document.execCommand('copy'); showToast('Message copied'); } catch (err) { showToast('Could not copy'); }
+                    document.body.removeChild(ta);
+                }
             }
 
             // Toggle expand via floating button
