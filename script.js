@@ -430,6 +430,15 @@ if (carousel) {
                 }
             });
 
+            // Slash (/) shortcut to focus search - doesn't trigger when typing in inputs
+            document.addEventListener('keydown', (ev) => {
+                if (ev.key === '/' && document.activeElement && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName) && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+                    ev.preventDefault();
+                    searchInput.focus();
+                    searchInput.select();
+                }
+            });
+
             // if products page has ?q= prefill
             try {
                 const params = new URLSearchParams(location.search);
