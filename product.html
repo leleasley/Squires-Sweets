@@ -1,0 +1,46 @@
+---
+layout: default
+title: Product
+---
+
+<section class="section">
+  <div class="container">
+    <div id="productDetail">
+      <p>Loading product…</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const PRODUCTS = {{ site.data.products | jsonify }};
+  function slugFromHash() {
+    return location.hash ? location.hash.replace('#','') : null;
+  }
+  function renderProduct(slug) {
+    const data = PRODUCTS.products[slug];
+    const container = document.getElementById('productDetail');
+    if (!data) {
+      container.innerHTML = '<p>Product not found. <a href="/products">Back to products</a></p>';
+      return;
+    }
+    document.title = `${data.name} - {{ site.title }}`;
+    container.innerHTML = `
+      <h1 class="page-title">${data.name}</h1>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:1rem;">
+        <div style="font-size:4rem;">${data.emoji}</div>
+        <div>
+          <p style="font-size:1rem;color:#4b5563;">${data.description || ''}</p>
+          <div style="margin-top:12px;display:flex;gap:8px;">
+            <button class="btn btn-primary add-to-mix" data-name="${data.name}">Add to Mix</button>
+            <a class="btn btn-secondary" href="/products">Back to products</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const slug = slugFromHash();
+    if (slug) renderProduct(slug);
+    window.addEventListener('hashchange', () => renderProduct(slugFromHash()));
+  });
+</script>

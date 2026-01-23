@@ -1,0 +1,403 @@
+categories:
+  - id: soft-jellys
+    name: "SOFT JELLYS"
+    items:
+      - mini-dolphins
+      - teeth-and-lips
+      - pint-pot-beer-bottles
+      - cola-bottles
+      - cherry-lips
+      - animal-mix
+      - sugar-and-spice
+      - fried-eggs
+      - heart-throbs
+      - yellow-belly-snakes
+      - single-cherrys
+      - giant-dolphins
+      - rhubarb-custard-soft
+
+  - id: hard-jellys
+    name: "HARD JELLYS"
+    items:
+      - midget-gems
+      - wine-gums
+      - dracula-teeth
+      - baby-meerkats
+      - jelly-beans
+      - building-blocks
+      - giant-strawberries
+      - rhubarb-custard-hard
+
+  - id: soft-fizzy
+    name: "SOFT FIZZY SWEETS"
+    items:
+      - fizzy-cherry-cola-bottles
+      - fizzy-jelly-mix
+      - fizzy-tooti-fruity-bottles
+      - fizzy-cola-bottles
+      - fizzy-bears
+      - fizzy-cherrys
+      - giant-fizzy-cola-bottles
+      - fizzy-fangs
+      - fizzy-mixed-animals
+
+  - id: classic-sweets
+    name: "CLASSIC SWEETS"
+    items:
+      - strawberry-milkshakes
+      - powdered-teeth
+      - powdered-milk-bottles
+      - desert-flavoured-pencils
+      - bananas-and-shrimps
+      - strawberry-bon-bons-pink
+      - raspberry-bon-bons-blue
+      - toffee-bon-bons-white
+      - flying-saucers
+      - alphabet-letters
+      - jelly-babies
+      - fruit-pastils
+      - teeth-and-toothbrushes
+      - american-hard-gums
+      - liquorice-cream-rocks
+      - pink-marshmallow-flumps
+      - refreshers
+      - boiled-sweets
+
+  - id: boiled-sweets
+    name: "BOILED SWEETS"
+    items:
+      - sherbert-lemons
+      - chocolate-limes
+      - fruit-drops
+      - watermelon-jawbreakers-green
+      - raspberry-jawbreakers-blue
+      - great-british-mix
+      - aniseed-humbugs
+      - mint-humbugs
+      - mint-imperials
+      - pear-drops
+      - cola-cubes
+
+  - id: chews
+    name: "CHEWS"
+    items:
+      - blackjacks
+      - fruit-salads
+      - sour-torpedos
+      - fruit-chews
+
+  - id: belts-pencils
+    name: "BELTS & PENCILS"
+    items:
+      - fizzy-strawberry-pencils
+      - fizzy-strawberry-belts
+      - fizzy-rainbow-pencils
+      - green-energy-pencils
+      - strawberry-pencils
+
+  - id: lollys
+    name: "LOLLYS"
+    items:
+      - chocolate-lollys
+      - sour-blue-raspberry-lollys
+      - assorted-fruit-lollys
+      - tongue-painter-lollys
+
+products:
+  mini-dolphins:
+    name: "Mini Dolphins"
+    emoji: "🐬"
+    description: "Soft jelly mini dolphins"
+    category: "SOFT JELLYS"
+  teeth-and-lips:
+    name: "Teeth & Lips"
+    emoji: "🦷👄"
+    description: "Classic teeth and lips jellies"
+    category: "SOFT JELLYS"
+  pint-pot-beer-bottles:
+    name: "Pint Pot Beer Bottles"
+    emoji: "🍺"
+    category: "SOFT JELLYS"
+  cola-bottles:
+    name: "Cola Bottles"
+    emoji: "🥤"
+    category: "SOFT JELLYS"
+  cherry-lips:
+    name: "Cherry Lips"
+    emoji: "👄"
+    category: "SOFT JELLYS"
+  animal-mix:
+    name: "Animal Mix"
+    emoji: "🦁🐻🐨"
+    category: "SOFT JELLYS"
+  sugar-and-spice:
+    name: "Sugar & Spice"
+    emoji: "🌶️🍬"
+    category: "SOFT JELLYS"
+  fried-eggs:
+    name: "Fried Eggs"
+    emoji: "🍳"
+    category: "SOFT JELLYS"
+  heart-throbs:
+    name: "Heart Throbs"
+    emoji: "❤️"
+    category: "SOFT JELLYS"
+  yellow-belly-snakes:
+    name: "Yellow Belly Snakes"
+    emoji: "🐍"
+    category: "SOFT JELLYS"
+  single-cherrys:
+    name: "Single Cherrys"
+    emoji: "🍒"
+    category: "SOFT JELLYS"
+  giant-dolphins:
+    name: "Giant Dolphins"
+    emoji: "🐬🐬"
+    category: "SOFT JELLYS"
+  rhubarb-custard-soft:
+    name: "Rhubarb & Custard (Soft)"
+    emoji: "🍬"
+    category: "SOFT JELLYS"
+
+  midget-gems:
+    name: "Midget Gems"
+    emoji: "💎"
+    category: "HARD JELLYS"
+  wine-gums:
+    name: "Wine Gums"
+    emoji: "🍷"
+    category: "HARD JELLYS"
+  dracula-teeth:
+    name: "Dracula Teeth"
+    emoji: "🧛"
+    category: "HARD JELLYS"
+  baby-meerkats:
+    name: "Baby Meerkats"
+    emoji: "🦆"
+    category: "HARD JELLYS"
+  jelly-beans:
+    name: "Jelly Beans"
+    emoji: "🫘"
+    category: "HARD JELLYS"
+  building-blocks:
+    name: "Building Blocks"
+    emoji: "🧱"
+    category: "HARD JELLYS"
+  giant-strawberries:
+    name: "Giant Strawberrys"
+    emoji: "🍓"
+    category: "HARD JELLYS"
+  rhubarb-custard-hard:
+    name: "Rhubarb & Custard (Hard)"
+    emoji: "🍬"
+    category: "HARD JELLYS"
+
+  fizzy-cherry-cola-bottles:
+    name: "Fizzy Cherry Cola Bottles"
+    emoji: "🥤✨"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-jelly-mix:
+    name: "Fizzy Jelly Mix"
+    emoji: "🍬✨"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-tooti-fruity-bottles:
+    name: "Fizzy Tooti Fruity Bottles"
+    emoji: "🥤🍓"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-cola-bottles:
+    name: "Fizzy Cola Bottles"
+    emoji: "🥤💫"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-bears:
+    name: "Fizzy Bears"
+    emoji: "🐻✨"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-cherrys:
+    name: "Fizzy Cherrys"
+    emoji: "🍒✨"
+    category: "SOFT FIZZY SWEETS"
+  giant-fizzy-cola-bottles:
+    name: "Giant Fizzy Cola Bottles"
+    emoji: "🥤🥤"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-fangs:
+    name: "Fizzy Fangs"
+    emoji: "🦷✨"
+    category: "SOFT FIZZY SWEETS"
+  fizzy-mixed-animals:
+    name: "Fizzy Mixed Animals"
+    emoji: "🦁✨"
+    category: "SOFT FIZZY SWEETS"
+
+  strawberry-milkshakes:
+    name: "Strawberry Milkshakes"
+    emoji: "🥛🍓"
+    category: "CLASSIC SWEETS"
+  powdered-teeth:
+    name: "Powdered Teeth"
+    emoji: "🦷"
+    category: "CLASSIC SWEETS"
+  powdered-milk-bottles:
+    name: "Powdered Milk Bottles"
+    emoji: "🍼"
+    category: "CLASSIC SWEETS"
+  desert-flavoured-pencils:
+    name: "Desert Flavoured Pencils"
+    emoji: "✏️"
+    category: "CLASSIC SWEETS"
+  bananas-and-shrimps:
+    name: "Banannas & Shrimps"
+    emoji: "🍌🦐"
+    category: "CLASSIC SWEETS"
+  strawberry-bon-bons-pink:
+    name: "Strawberry Bon Bons (Pink)"
+    emoji: "🍬🌸"
+    category: "CLASSIC SWEETS"
+  raspberry-bon-bons-blue:
+    name: "Raspberry Bon Bons (Blue)"
+    emoji: "🍬💙"
+    category: "CLASSIC SWEETS"
+  toffee-bon-bons-white:
+    name: "Toffee Bon Bons (White)"
+    emoji: "🍬🤎"
+    category: "CLASSIC SWEETS"
+  flying-saucers:
+    name: "Flying Saucers"
+    emoji: "🛸"
+    category: "CLASSIC SWEETS"
+  alphabet-letters:
+    name: "Alphabet Letters"
+    emoji: "🔤"
+    category: "CLASSIC SWEETS"
+  jelly-babies:
+    name: "Jelly Babies"
+    emoji: "👶"
+    category: "CLASSIC SWEETS"
+  fruit-pastils:
+    name: "Fruit Pastils"
+    emoji: "🍬🌈"
+    category: "CLASSIC SWEETS"
+  teeth-and-toothbrushes:
+    name: "Teeth & ToothBrushes"
+    emoji: "🦷🪥"
+    category: "CLASSIC SWEETS"
+  american-hard-gums:
+    name: "American Hard Gums"
+    emoji: "🍬💛"
+    category: "CLASSIC SWEETS"
+  liquorice-cream-rocks:
+    name: "Liquorice Cream Rocks"
+    emoji: "🪨"
+    category: "CLASSIC SWEETS"
+  pink-marshmallow-flumps:
+    name: "Pink Marshmallow Flumps"
+    emoji: "☁️💗"
+    category: "CLASSIC SWEETS"
+  refreshers:
+    name: "Refreshers"
+    emoji: "✨🍬"
+    category: "CLASSIC SWEETS"
+  boiled-sweets-catchall:
+    name: "Boiled Sweets"
+    emoji: "🍭"
+    category: "CLASSIC SWEETS"
+
+  sherbert-lemons:
+    name: "Sherbert Lemons"
+    emoji: "🍋"
+    category: "BOILED SWEETS"
+  chocolate-limes:
+    name: "Chocolate Limes"
+    emoji: "🍫🍋"
+    category: "BOILED SWEETS"
+  fruit-drops:
+    name: "Fruit Drops"
+    emoji: "🍬🌈"
+    category: "BOILED SWEETS"
+  watermelon-jawbreakers-green:
+    name: "Watermelon Jawbreakers (Green)"
+    emoji: "🍉"
+    category: "BOILED SWEETS"
+  raspberry-jawbreakers-blue:
+    name: "Raspberry Jawbreakers (Blue)"
+    emoji: "🫐"
+    category: "BOILED SWEETS"
+  great-british-mix:
+    name: "Great British Mix"
+    emoji: "🇬🇧"
+    category: "BOILED SWEETS"
+  aniseed-humbugs:
+    name: "Anaseed Humbugs"
+    emoji: "🍬🌟"
+    category: "BOILED SWEETS"
+  mint-humbugs:
+    name: "Mint Humbugs"
+    emoji: "🌿"
+    category: "BOILED SWEETS"
+  mint-imperials:
+    name: "Mint Impearials"
+    emoji: "🌱"
+    category: "BOILED SWEETS"
+  pear-drops:
+    name: "Pear Drops"
+    emoji: "🍐"
+    category: "BOILED SWEETS"
+  cola-cubes:
+    name: "Cola Cubes"
+    emoji: "🔲"
+    category: "BOILED SWEETS"
+
+  blackjacks:
+    name: "BlackJacks"
+    emoji: "⬛"
+    category: "CHEWS"
+  fruit-salads:
+    name: "Fruit Salads"
+    emoji: "🍌🍎"
+    category: "CHEWS"
+  sour-torpedos:
+    name: "Sour Torpedos"
+    emoji: "🚀"
+    category: "CHEWS"
+  fruit-chews:
+    name: "Fruit Chews"
+    emoji: "🍬😋"
+    category: "CHEWS"
+
+  fizzy-strawberry-pencils:
+    name: "Fizzy Strawberry Pencils"
+    emoji: "✏️🍓"
+    category: "BELTS & PENCILS"
+  fizzy-strawberry-belts:
+    name: "Fizzy Strawberry Belts"
+    emoji: "🎀🍓"
+    category: "BELTS & PENCILS"
+  fizzy-rainbow-pencils:
+    name: "Fizzy Rainbow Pencils"
+    emoji: "✏️🌈"
+    category: "BELTS & PENCILS"
+  green-energy-pencils:
+    name: "Green Energy Pencils"
+    emoji: "⚡✏️"
+    category: "BELTS & PENCILS"
+  strawberry-pencils:
+    name: "Strawberry Pencils"
+    emoji: "✏️"
+    category: "BELTS & PENCILS"
+
+  chocolate-lollys:
+    name: "Choclate Lollys"
+    emoji: "🍫🍭"
+    category: "LOLLYS"
+  sour-blue-raspberry-lollys:
+    name: "Sour Blue Rasberry Lollys"
+    emoji: "🍭💙"
+    category: "LOLLYS"
+  assorted-fruit-lollys:
+    name: "Assorted Fruit Lollys"
+    emoji: "🍭🌈"
+    category: "LOLLYS"
+  tongue-painter-lollys:
+    name: "Tongue Painter Lollys"
+    emoji: "👅🍭"
+    category: "LOLLYS"

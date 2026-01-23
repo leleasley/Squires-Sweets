@@ -189,6 +189,7 @@ if (carousel) {
                 </div>
             </div>
             <div class="mix-items" id="mixItems">No items selected</div>
+            <div id="mixAria" class="sr-only" aria-live="polite" aria-atomic="true"></div>
         `;
         document.body.appendChild(builder);
 
@@ -211,15 +212,18 @@ if (carousel) {
         if (!builder) return;
         countEl.textContent = `${selected.length}/${MAX_ITEMS}`;
         toggleCount.textContent = selected.length;
+        const aria = document.getElementById('mixAria');
 
         if (selected.length === 0) {
             items.textContent = 'No items selected';
+            if (aria) aria.textContent = 'No items selected';
             builder.classList.remove('visible','expanded');
             if (toggle) toggle.classList.remove('visible');
             expanded = false;
         } else {
             // show items as bullet list (nicer for WA message)
             items.innerHTML = selected.map((s, i) => `<div><span style="color:#fbbf24;">•</span><span style="margin-left:8px;">${s}</span></div>`).join('');
+            if (aria) aria.textContent = `${selected.length} items selected: ${selected.join(', ')}`;
             builder.classList.add('visible');
             if (toggle) toggle.classList.add('visible');
             // if already expanded keep state, otherwise stay peek
@@ -289,6 +293,28 @@ if (carousel) {
                 const text = lines.join('\n');
                 const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
                 window.open(url, '_blank');
+            }
+
+            // Add from product detail "Add to Mix" button
+            const addBtn = e.target.closest && e.target.closest('.add-to-mix');
+            if (addBtn) {
+                const name = addBtn.getAttribute('data-name');
+                if (!name) return;
+                if (selected.indexOf(name) === -1) {
+                    if (selected.length >= MAX_ITEMS) {
+                        alert(`You can only select up to ${MAX_ITEMS} items.`);
+                        return;
+                    }
+                    selected.push(name);
+                }
+                // Visual feedback: briefly flash the floating toggle
+                const toggleEl = document.getElementById('mixToggle');
+                if (toggleEl) {
+                    toggleEl.classList.add('visible');
+                    setTimeout(()=>toggleEl.classList.add('pulse'), 120);
+                    setTimeout(()=>toggleEl.classList.remove('pulse'), 600);
+                }
+                updateBuilder();
             }
 
             // Toggle expand via floating button

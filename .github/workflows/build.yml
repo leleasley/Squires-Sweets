@@ -1,0 +1,33 @@
+name: Build site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install || true
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --trace
+
+      - name: Check broken links (lychee)
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: './_site'

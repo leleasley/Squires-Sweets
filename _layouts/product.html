@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.og_image | default: '/image/mix1.png' }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+</head>
+<body>
+  {% include header.html %}
+  <main class="section container">
+    <div class="product-detail">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% assign p = site.data.products.products[page.product] %}
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:1rem;">
+        <div style="font-size:4rem;">{{ p.emoji }}</div>
+        <div>
+          <p style="font-size:1rem;color:#4b5563;">{{ p.description }}</p>
+          <div style="margin-top:12px;display:flex;gap:8px;">
+            <button class="btn btn-primary add-to-mix" data-name="{{ p.name }}">Add to Mix</button>
+            <a class="btn btn-secondary" href="{{ site.baseurl }}/products">Back to products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
+  <script src="{{ site.baseurl }}/script.js"></script>
+</body>
+</html>

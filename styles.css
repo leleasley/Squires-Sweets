@@ -561,8 +561,9 @@ body {
 
 .mix-toggle {
     position: fixed;
-    right: 20px;
-    bottom: 24px;
+    left: 20px;
+    right: auto;
+    bottom: 140px;
     background: linear-gradient(90deg,#ec4899,#fbbf24);
     color: white;
     padding: 0.6rem 0.9rem;
@@ -572,14 +573,19 @@ body {
     display: none;
     align-items: center;
     gap: 10px;
+    transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .mix-toggle.visible { display: flex; }
+.mix-toggle.pulse { transform: scale(1.06); box-shadow: 0 10px 30px rgba(0,0,0,0.16); }
+
+/* Hide toggle when the sheet is fully expanded to avoid overlap */
+.mix-builder.expanded ~ .mix-toggle { display: none; }
 
 /* Allow scrolling underneath on small screens while sheet is visible */
 @media (max-width: 768px) {
     .mix-builder { width: calc(100% - 24px); left: 12px; transform: none; }
-    .mix-toggle { right: 14px; bottom: 20px; }
+    .mix-toggle { left: 14px; right: auto; bottom: 110px; }
 }
 
 .product-image {
@@ -1050,6 +1056,34 @@ body {
 /* Utility Classes */
 .text-center {
     text-align: center;
+}
+
+/* Accessibility helpers */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    background: #111827;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 10000;
+    border-radius: 6px;
+}
+.skip-link:focus {
+    left: 12px;
+    top: 12px;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 /* Smooth scrolling for better UX */

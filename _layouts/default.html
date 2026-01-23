@@ -24,11 +24,25 @@
             <link rel="stylesheet" href="{{ site.baseurl }}/{{ css }}">
         {% endfor %}
     {% endif %}
+
+    <!-- Site-level structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "telephone": "+44 7564 230269"
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% include header.html %}
     
-    {{ content }}
+    <main id="main-content" tabindex="-1">
+        {{ content }}
+    </main>
     
     {% include footer.html %}
     

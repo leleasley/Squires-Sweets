@@ -1,7 +1,34 @@
 ---
 layout: default
 title: Special Offer
+description: "LIMITED TIME: Pick 5-10 sweets for just £8 — message us on WhatsApp to order your custom bag."
+og_image: /image/mix3.png
 ---
+
+<!-- Structured Data: LocalBusiness + Offer -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "telephone": "+44 7564 230269",
+      "sameAs": ["https://www.instagram.com/squiressweets2025/","https://www.facebook.com/people/Squires-Sweets/61583811742044/"]
+    },
+    {
+      "@type": "Offer",
+      "name": "5-10 sweets for £8",
+      "price": "8.00",
+      "priceCurrency": "GBP",
+      "url": "{{ site.url }}{{ page.url }}",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@type": "LocalBusiness", "name": "{{ site.title }}" }
+    }
+  ]
+}
+</script>
 
     <!-- Promo Hero -->
     <section class="promo-hero">

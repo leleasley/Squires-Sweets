@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Our Sweets
+description: "Browse over 40 sweets, neatly categorized — build your custom mix and message us on WhatsApp."
+og_image: /image/mix2.png
 extra_css:
   - products.css
 ---
@@ -18,133 +20,20 @@ extra_css:
   <section class="section">
     <div class="container">
 
-      <!-- SOFT JELLYS -->
-      <div class="category-section">
-        <h2 class="category-title">SOFT JELLYS</h2>
+      {% for cat in site.data.products.categories %}
+      <div class="category-section" id="{{ cat.id }}">
+        <h2 class="category-title">{{ cat.name }}</h2>
         <div class="products-grid">
-          <div class="product-card"><div class="product-image">🐬</div><h3 class="product-name">Mini Dolphins</h3></div>
-          <div class="product-card"><div class="product-image">🦷👄</div><h3 class="product-name">Teeth & Lips</h3></div>
-          <div class="product-card"><div class="product-image">🍺</div><h3 class="product-name">Pint Pot Beer Bottles</h3></div>
-          <div class="product-card"><div class="product-image">🥤</div><h3 class="product-name">Cola Bottles</h3></div>
-          <div class="product-card"><div class="product-image">👄</div><h3 class="product-name">Cherry Lips</h3></div>
-          <div class="product-card"><div class="product-image">🦁🐻🐨</div><h3 class="product-name">Animal Mix</h3></div>
-          <div class="product-card"><div class="product-image">🌶️🍬</div><h3 class="product-name">Sugar & Spice</h3></div>
-          <div class="product-card"><div class="product-image">🍳</div><h3 class="product-name">Fried Eggs</h3></div>
-          <div class="product-card"><div class="product-image">❤️</div><h3 class="product-name">Heart Throbs</h3></div>
-          <div class="product-card"><div class="product-image">🐍</div><h3 class="product-name">Yellow Belly Snakes</h3></div>
-          <div class="product-card"><div class="product-image">🍒</div><h3 class="product-name">Single Cherrys</h3></div>
-          <div class="product-card"><div class="product-image">🐬🐬</div><h3 class="product-name">Giant Dolphins</h3></div>
-          <div class="product-card"><div class="product-image">🍬</div><h3 class="product-name">Rhubarb & Custard (Soft)</h3></div>
+          {% for slug in cat.items %}
+            {% assign p = site.data.products.products[slug] %}
+            <a href="{{ site.baseurl }}/product.html#{{ slug }}" class="product-card" aria-label="{{ p.name }}">
+              <div class="product-image">{{ p.emoji }}</div>
+              <h3 class="product-name">{{ p.name }}</h3>
+            </a>
+          {% endfor %}
         </div>
       </div>
-
-      <!-- HARD JELLYS -->
-      <div class="category-section">
-        <h2 class="category-title">HARD JELLYS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">💎</div><h3 class="product-name">Midget Gems</h3></div>
-          <div class="product-card"><div class="product-image">🍷</div><h3 class="product-name">Wine Gums</h3></div>
-          <div class="product-card"><div class="product-image">🧛</div><h3 class="product-name">Dracula Teeth</h3></div>
-          <div class="product-card"><div class="product-image">🦆</div><h3 class="product-name">Baby Meerkats</h3></div>
-          <div class="product-card"><div class="product-image">🫘</div><h3 class="product-name">Jelly Beans</h3></div>
-          <div class="product-card"><div class="product-image">🧱</div><h3 class="product-name">Building Blocks</h3></div>
-          <div class="product-card"><div class="product-image">🍓</div><h3 class="product-name">Giant Strawberrys</h3></div>
-          <div class="product-card"><div class="product-image">🍬</div><h3 class="product-name">Rhubarb & Custard (Hard)</h3></div>
-        </div>
-      </div>
-
-      <!-- SOFT FIZZY SWEETS -->
-      <div class="category-section">
-        <h2 class="category-title">SOFT FIZZY SWEETS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">🥤✨</div><h3 class="product-name">Fizzy Cherry Cola Bottles</h3></div>
-          <div class="product-card"><div class="product-image">🍬✨</div><h3 class="product-name">Fizzy Jelly Mix</h3></div>
-          <div class="product-card"><div class="product-image">🥤🍓</div><h3 class="product-name">Fizzy Tooti Fruity Bottles</h3></div>
-          <div class="product-card"><div class="product-image">🥤💫</div><h3 class="product-name">Fizzy Cola Bottles</h3></div>
-          <div class="product-card"><div class="product-image">🐻✨</div><h3 class="product-name">Fizzy Bears</h3></div>
-          <div class="product-card"><div class="product-image">🍒✨</div><h3 class="product-name">Fizzy Cherrys</h3></div>
-          <div class="product-card"><div class="product-image">🥤🥤</div><h3 class="product-name">Giant Fizzy Cola Bottles</h3></div>
-          <div class="product-card"><div class="product-image">🦷✨</div><h3 class="product-name">Fizzy Fangs</h3></div>
-          <div class="product-card"><div class="product-image">🦁✨</div><h3 class="product-name">Fizzy Mixed Animals</h3></div>
-        </div>
-      </div>
-
-      <!-- CLASSIC SWEETS -->
-      <div class="category-section">
-        <h2 class="category-title">CLASSIC SWEETS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">🥛🍓</div><h3 class="product-name">Strawberry Milkshakes</h3></div>
-          <div class="product-card"><div class="product-image">🦷</div><h3 class="product-name">Powdered Teeth</h3></div>
-          <div class="product-card"><div class="product-image">🍼</div><h3 class="product-name">Powdered Milk Bottles</h3></div>
-          <div class="product-card"><div class="product-image">✏️</div><h3 class="product-name">Desert Flavoured Pencils</h3></div>
-          <div class="product-card"><div class="product-image">🍌🦐</div><h3 class="product-name">Bannanas & Shrimps</h3></div>
-          <div class="product-card"><div class="product-image">🍬🌸</div><h3 class="product-name">Strawberry Bon Bons (Pink)</h3></div>
-          <div class="product-card"><div class="product-image">🍬💙</div><h3 class="product-name">Raspberry Bon Bons (Blue)</h3></div>
-          <div class="product-card"><div class="product-image">🍬🤎</div><h3 class="product-name">Toffee Bon Bons (White)</h3></div>
-          <div class="product-card"><div class="product-image">🛸</div><h3 class="product-name">Flying Saucers</h3></div>
-          <div class="product-card"><div class="product-image">🔤</div><h3 class="product-name">Alphabet Letters</h3></div>
-          <div class="product-card"><div class="product-image">👶</div><h3 class="product-name">Jelly Babies</h3></div>
-          <div class="product-card"><div class="product-image">🍬🌈</div><h3 class="product-name">Fruit Pastils</h3></div>
-          <div class="product-card"><div class="product-image">🦷🪥</div><h3 class="product-name">Teeth & ToothBrushes</h3></div>
-          <div class="product-card"><div class="product-image">🍬💛</div><h3 class="product-name">American Hard Gums</h3></div>
-          <div class="product-card"><div class="product-image">🪨</div><h3 class="product-name">Liquorice Cream Rocks</h3></div>
-          <div class="product-card"><div class="product-image">☁️💗</div><h3 class="product-name">Pink Marshmallow Flumps</h3></div>
-          <div class="product-card"><div class="product-image">✨🍬</div><h3 class="product-name">Refreshers</h3></div>
-          <div class="product-card"><div class="product-image">🍭</div><h3 class="product-name">Boiled Sweets</h3></div>
-        </div>
-      </div>
-
-      <!-- BOILED SWEETS -->
-      <div class="category-section">
-        <h2 class="category-title">BOILED SWEETS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">🍋</div><h3 class="product-name">Sherbert Lemons</h3></div>
-          <div class="product-card"><div class="product-image">🍫🍋</div><h3 class="product-name">Chocolate Limes</h3></div>
-          <div class="product-card"><div class="product-image">🍬🌈</div><h3 class="product-name">Fruit Drops</h3></div>
-          <div class="product-card"><div class="product-image">🍉</div><h3 class="product-name">Watermelon Jawbreakers (Green)</h3></div>
-          <div class="product-card"><div class="product-image">🫐</div><h3 class="product-name">Raspberry Jawbreakers (Blue)</h3></div>
-          <div class="product-card"><div class="product-image">🇬🇧</div><h3 class="product-name">Great British Mix</h3></div>
-          <div class="product-card"><div class="product-image">🍬🌟</div><h3 class="product-name">Anaseed Humbugs</h3></div>
-          <div class="product-card"><div class="product-image">🌿</div><h3 class="product-name">Mint Humbugs</h3></div>
-          <div class="product-card"><div class="product-image">🌱</div><h3 class="product-name">Mint Impearials</h3></div>
-          <div class="product-card"><div class="product-image">🍐</div><h3 class="product-name">Pear Drops</h3></div>
-          <div class="product-card"><div class="product-image">🔲</div><h3 class="product-name">Cola Cubes</h3></div>
-        </div>
-      </div>
-
-      <!-- CHEWS -->
-      <div class="category-section">
-        <h2 class="category-title">CHEWS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">⬛</div><h3 class="product-name">BlackJacks</h3></div>
-          <div class="product-card"><div class="product-image">🍌🍎</div><h3 class="product-name">Fruit Salads</h3></div>
-          <div class="product-card"><div class="product-image">🚀</div><h3 class="product-name">Sour Torpedos</h3></div>
-          <div class="product-card"><div class="product-image">🍬😋</div><h3 class="product-name">Fruit Chews</h3></div>
-        </div>
-      </div>
-
-      <!-- BELTS & PENCILS -->
-      <div class="category-section">
-        <h2 class="category-title">BELTS & PENCILS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">✏️🍓</div><h3 class="product-name">Fizzy Strawberry Pencils</h3></div>
-          <div class="product-card"><div class="product-image">🎀🍓</div><h3 class="product-name">Fizzy Strawberry Belts</h3></div>
-          <div class="product-card"><div class="product-image">✏️🌈</div><h3 class="product-name">Fizzy Rainbow Pencils</h3></div>
-          <div class="product-card"><div class="product-image">⚡✏️</div><h3 class="product-name">Green Energy Pencils</h3></div>
-          <div class="product-card"><div class="product-image">✏️</div><h3 class="product-name">Strawberry Pencils</h3></div>
-        </div>
-      </div>
-
-      <!-- LOLLYS -->
-      <div class="category-section">
-        <h2 class="category-title">LOLLYS</h2>
-        <div class="products-grid">
-          <div class="product-card"><div class="product-image">🍫🍭</div><h3 class="product-name">Choclate Lollys</h3></div>
-          <div class="product-card"><div class="product-image">🍭💙</div><h3 class="product-name">Sour Blue Rasberry Lollys</h3></div>
-          <div class="product-card"><div class="product-image">🍭🌈</div><h3 class="product-name">Assorted Fruit Lollys</h3></div>
-          <div class="product-card"><div class="product-image">👅🍭</div><h3 class="product-name">Tongue Painter Lollys</h3></div>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </section>
@@ -154,13 +43,13 @@ extra_css:
     <h2 class="section-title">Ideas for Your Sweet Mix</h2>
     <p class="section-subtitle">Here's a glimpse of what your custom order could look like!</p>
     <div class="images-grid">
-      <div class="image-card"><img src="/image/mix1.png" alt="Example sweet mix 1" class="mix-img"></div>
-      <div class="image-card"><img src="/image/mix2.png" alt="Example sweet mix 2" class="mix-img"></div>
-      <div class="image-card"><img src="/image/mix3.png" alt="Example sweet mix 3" class="mix-img"></div>
-      <div class="image-card"><img src="/image/mix4.png" alt="Example sweet mix 4" class="mix-img"></div>
-      <div class="image-card"><img src="/image/mix5.png" alt="Example sweet mix 5" class="mix-img"></div>
-      <div class="image-card"><img src="/image/mix6.png" alt="Example sweet mix 6" class="mix-img"></div>
-      <div class="image-card"><img src="/image/mix7.png" alt="Example sweet mix 7" class="mix-img"></div>
+      <div class="image-card"><img src="/image/mix1.png" alt="Example sweet mix 1" class="mix-img" loading="lazy"></div>
+      <div class="image-card"><img src="/image/mix2.png" alt="Example sweet mix 2" class="mix-img" loading="lazy"></div>
+      <div class="image-card"><img src="/image/mix3.png" alt="Example sweet mix 3" class="mix-img" loading="lazy"></div>
+      <div class="image-card"><img src="/image/mix4.png" alt="Example sweet mix 4" class="mix-img" loading="lazy"></div>
+      <div class="image-card"><img src="/image/mix5.png" alt="Example sweet mix 5" class="mix-img" loading="lazy"></div>
+      <div class="image-card"><img src="/image/mix6.png" alt="Example sweet mix 6" class="mix-img" loading="lazy"></div>
+      <div class="image-card"><img src="/image/mix7.png" alt="Example sweet mix 7" class="mix-img" loading="lazy"></div>
     </div>
   </section>
 
