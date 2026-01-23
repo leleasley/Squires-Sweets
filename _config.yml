@@ -1,0 +1,21 @@
+# Site settings
+title: Squires Sweets
+description: Create Your Perfect Sweet Mix - Choose from over 40 different sweets
+url: https://www.squiressweets.com
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude files from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include CNAME in build
+include:
+  - CNAME
