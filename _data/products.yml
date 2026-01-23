@@ -1,473 +1,605 @@
+---
 categories:
-  - id: soft-jellys
-    name: "SOFT JELLYS"
-    items:
-      - mini-dolphins
-      - teeth-and-lips
-      - pint-pot-beer-bottles
-      - cola-bottles
-      - cherry-lips
-      - animal-mix
-      - sugar-and-spice
-      - fried-eggs
-      - heart-throbs
-      - yellow-belly-snakes
-      - single-cherrys
-      - giant-dolphins
-      - rhubarb-custard-soft
-
-  - id: hard-jellys
-    name: "HARD JELLYS"
-    items:
-      - midget-gems
-      - wine-gums
-      - dracula-teeth
-      - baby-meerkats
-      - jelly-beans
-      - building-blocks
-      - giant-strawberries
-      - rhubarb-custard-hard
-
-  - id: soft-fizzy
-    name: "SOFT FIZZY SWEETS"
-    items:
-      - fizzy-cherry-cola-bottles
-      - fizzy-jelly-mix
-      - fizzy-tooti-fruity-bottles
-      - fizzy-cola-bottles
-      - fizzy-bears
-      - fizzy-cherrys
-      - giant-fizzy-cola-bottles
-      - fizzy-fangs
-      - fizzy-mixed-animals
-
-  - id: classic-sweets
-    name: "CLASSIC SWEETS"
-    items:
-      - strawberry-milkshakes
-      - powdered-teeth
-      - powdered-milk-bottles
-      - desert-flavoured-pencils
-      - bananas-and-shrimps
-      - strawberry-bon-bons-pink
-      - raspberry-bon-bons-blue
-      - toffee-bon-bons-white
-      - flying-saucers
-      - alphabet-letters
-      - jelly-babies
-      - fruit-pastils
-      - teeth-and-toothbrushes
-      - american-hard-gums
-      - liquorice-cream-rocks
-      - pink-marshmallow-flumps
-      - refreshers
-      - boiled-sweets
-
-  - id: boiled-sweets
-    name: "BOILED SWEETS"
-    items:
-      - sherbert-lemons
-      - chocolate-limes
-      - fruit-drops
-      - watermelon-jawbreakers-green
-      - raspberry-jawbreakers-blue
-      - great-british-mix
-      - aniseed-humbugs
-      - mint-humbugs
-      - mint-imperials
-      - pear-drops
-      - cola-cubes
-
-  - id: chews
-    name: "CHEWS"
-    items:
-      - blackjacks
-      - fruit-salads
-      - sour-torpedos
-      - fruit-chews
-
-  - id: belts-pencils
-    name: "BELTS & PENCILS"
-    items:
-      - fizzy-strawberry-pencils
-      - fizzy-strawberry-belts
-      - fizzy-rainbow-pencils
-      - green-energy-pencils
-      - strawberry-pencils
-
-  - id: lollys
-    name: "LOLLYS"
-    items:
-      - chocolate-lollys
-      - sour-blue-raspberry-lollys
-      - assorted-fruit-lollys
-      - tongue-painter-lollys
-
+- id: soft-jellys
+  name: SOFT JELLYS
+  items:
+  - mini-dolphins
+  - teeth-and-lips
+  - pint-pot-beer-bottles
+  - cola-bottles
+  - cherry-lips
+  - animal-mix
+  - sugar-and-spice
+  - fried-eggs
+  - heart-throbs
+  - yellow-belly-snakes
+  - single-cherrys
+  - giant-dolphins
+  - rhubarb-custard-soft
+- id: hard-jellys
+  name: HARD JELLYS
+  items:
+  - midget-gems
+  - wine-gums
+  - dracula-teeth
+  - baby-meerkats
+  - jelly-beans
+  - building-blocks
+  - giant-strawberries
+  - rhubarb-custard-hard
+- id: soft-fizzy
+  name: SOFT FIZZY SWEETS
+  items:
+  - fizzy-cherry-cola-bottles
+  - fizzy-jelly-mix
+  - fizzy-tooti-fruity-bottles
+  - fizzy-cola-bottles
+  - fizzy-bears
+  - fizzy-cherrys
+  - giant-fizzy-cola-bottles
+  - fizzy-fangs
+  - fizzy-mixed-animals
+- id: classic-sweets
+  name: CLASSIC SWEETS
+  items:
+  - strawberry-milkshakes
+  - powdered-teeth
+  - powdered-milk-bottles
+  - desert-flavoured-pencils
+  - bananas-and-shrimps
+  - strawberry-bon-bons-pink
+  - raspberry-bon-bons-blue
+  - toffee-bon-bons-white
+  - flying-saucers
+  - alphabet-letters
+  - jelly-babies
+  - fruit-pastils
+  - teeth-and-toothbrushes
+  - american-hard-gums
+  - liquorice-cream-rocks
+  - pink-marshmallow-flumps
+  - refreshers
+  - boiled-sweets
+- id: boiled-sweets
+  name: BOILED SWEETS
+  items:
+  - sherbert-lemons
+  - chocolate-limes
+  - fruit-drops
+  - watermelon-jawbreakers-green
+  - raspberry-jawbreakers-blue
+  - great-british-mix
+  - aniseed-humbugs
+  - mint-humbugs
+  - mint-imperials
+  - pear-drops
+  - cola-cubes
+- id: chews
+  name: CHEWS
+  items:
+  - blackjacks
+  - fruit-salads
+  - sour-torpedos
+  - fruit-chews
+- id: belts-pencils
+  name: BELTS & PENCILS
+  items:
+  - fizzy-strawberry-pencils
+  - fizzy-strawberry-belts
+  - fizzy-rainbow-pencils
+  - green-energy-pencils
+  - strawberry-pencils
+- id: lollys
+  name: LOLLYS
+  items:
+  - chocolate-lollys
+  - sour-blue-raspberry-lollys
+  - assorted-fruit-lollys
+  - tongue-painter-lollys
 products:
   mini-dolphins:
-    name: "Mini Dolphins"
-    emoji: "🐬"
-    description: "Small, soft dolphin-shaped jelly sweets with a classic fruity flavour."
-    category: "SOFT JELLYS"
+    name: Mini Dolphins
+    emoji: "\U0001F42C"
+    description: Small, soft dolphin-shaped jelly sweets with a classic fruity flavour.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   teeth-and-lips:
-    name: "Teeth & Lips"
-    emoji: "🦷👄"
-    description: "Two-tone chewy jellies shaped like teeth and lips; sweet and soft."
-    category: "SOFT JELLYS"
+    name: Teeth & Lips
+    emoji: "\U0001F9B7\U0001F444"
+    description: Two-tone chewy jellies shaped like teeth and lips; sweet and soft.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   pint-pot-beer-bottles:
-    name: "Pint Pot Beer Bottles"
-    emoji: "🍺"
-    description: "Lively cola-flavoured jelly bottles shaped like mini pints — fizzy-style chew."
-    category: "SOFT JELLYS"
+    name: Pint Pot Beer Bottles
+    emoji: "\U0001F37A"
+    description: Lively cola-flavoured jelly bottles shaped like mini pints — fizzy-style
+      chew.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   cola-bottles:
-    name: "Cola Bottles"
-    emoji: "🥤"
-    description: "Classic cola gummy bottles with a fizzy sugar coating for extra tang."
-    category: "SOFT JELLYS"
+    name: Cola Bottles
+    emoji: "\U0001F964"
+    description: Classic cola gummy bottles with a fizzy sugar coating for extra tang.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   cherry-lips:
-    name: "Cherry Lips"
-    emoji: "👄"
-    description: "Chewy cherry-flavoured lips with a tart bite and soft texture."
-    category: "SOFT JELLYS"
+    name: Cherry Lips
+    emoji: "\U0001F444"
+    description: Chewy cherry-flavoured lips with a tart bite and soft texture.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   animal-mix:
-    name: "Animal Mix"
-    emoji: "🦁🐻🐨"
-    description: "Assorted animal-shaped jellies in a mix of fruity flavours."
-    category: "SOFT JELLYS"
+    name: Animal Mix
+    emoji: "\U0001F981\U0001F43B\U0001F428"
+    description: Assorted animal-shaped jellies in a mix of fruity flavours.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   sugar-and-spice:
-    name: "Sugar & Spice"
-    emoji: "🌶️🍬"
-    description: "A sweet and slightly spicy chewy mix with a sugary finish."
-    category: "SOFT JELLYS"
+    name: Sugar & Spice
+    emoji: "\U0001F336️\U0001F36C"
+    description: A sweet and slightly spicy chewy mix with a sugary finish.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   fried-eggs:
-    name: "Fried Eggs"
-    emoji: "🍳"
-    description: "Cute fried-egg shaped jellies — sweet, tangy yellow and white centres."
-    category: "SOFT JELLYS"
+    name: Fried Eggs
+    emoji: "\U0001F373"
+    description: Cute fried-egg shaped jellies — sweet, tangy yellow and white centres.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   heart-throbs:
-    name: "Heart Throbs"
+    name: Heart Throbs
     emoji: "❤️"
-    description: "Berry-flavoured heart-shaped soft jellies — sweet and tender."
-    category: "SOFT JELLYS"
+    description: Berry-flavoured heart-shaped soft jellies — sweet and tender.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   yellow-belly-snakes:
-    name: "Yellow Belly Snakes"
-    emoji: "🐍"
-    description: "Curved snake-shaped chewy sweets with a zesty citrus kick."
-    category: "SOFT JELLYS"
+    name: Yellow Belly Snakes
+    emoji: "\U0001F40D"
+    description: Curved snake-shaped chewy sweets with a zesty citrus kick.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   single-cherrys:
-    name: "Single Cherrys"
-    emoji: "🍒"
-    description: "Individual cherry-shaped gummies with intense cherry flavour."
-    category: "SOFT JELLYS"
+    name: Single Cherrys
+    emoji: "\U0001F352"
+    description: Individual cherry-shaped gummies with intense cherry flavour.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   giant-dolphins:
-    name: "Giant Dolphins"
-    emoji: "🐬🐬"
-    description: "Larger version of our dolphin jellies — extra chewy and fruity."
-    category: "SOFT JELLYS"
+    name: Giant Dolphins
+    emoji: "\U0001F42C\U0001F42C"
+    description: Larger version of our dolphin jellies — extra chewy and fruity.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   rhubarb-custard-soft:
-    name: "Rhubarb & Custard (Soft)"
-    emoji: "🍬"
-    description: "Soft, fruity rhubarb pieces balanced with sweet custard flavour."
-    category: "SOFT JELLYS"
-
+    name: Rhubarb & Custard (Soft)
+    emoji: "\U0001F36C"
+    description: Soft, fruity rhubarb pieces balanced with sweet custard flavour.
+    category: SOFT JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   midget-gems:
-    name: "Midget Gems"
-    emoji: "💎"
-    description: "Small, firm jelly sweets coated with a sugary shell; classic retro treat."
-    category: "HARD JELLYS"
+    name: Midget Gems
+    emoji: "\U0001F48E"
+    description: Small, firm jelly sweets coated with a sugary shell; classic retro
+      treat.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   wine-gums:
-    name: "Wine Gums"
-    emoji: "🍷"
-    description: "Chewy, wine-flavoured gums with a dense texture and fruity depth."
-    category: "HARD JELLYS"
+    name: Wine Gums
+    emoji: "\U0001F377"
+    description: Chewy, wine-flavoured gums with a dense texture and fruity depth.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   dracula-teeth:
-    name: "Dracula Teeth"
-    emoji: "🧛"
-    description: "Hard gummy teeth with a chewy core and sweet, tangy flavour."
-    category: "HARD JELLYS"
+    name: Dracula Teeth
+    emoji: "\U0001F9DB"
+    description: Hard gummy teeth with a chewy core and sweet, tangy flavour.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   baby-meerkats:
-    name: "Baby Meerkats"
-    emoji: "🦆"
-    description: "Small hard jelly shapes in assorted fruit flavours — fun for sharing."
-    category: "HARD JELLYS"
+    name: Baby Meerkats
+    emoji: "\U0001F986"
+    description: Small hard jelly shapes in assorted fruit flavours — fun for sharing.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   jelly-beans:
-    name: "Jelly Beans"
-    emoji: "🫘"
-    description: "Classic bite-sized jelly beans in a variety of sweet flavours."
-    category: "HARD JELLYS"
+    name: Jelly Beans
+    emoji: "\U0001FAD8"
+    description: Classic bite-sized jelly beans in a variety of sweet flavours.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   building-blocks:
-    name: "Building Blocks"
-    emoji: "🧱"
-    description: "Firm, chewy block-shaped jellies in bright fruity flavours."
-    category: "HARD JELLYS"
+    name: Building Blocks
+    emoji: "\U0001F9F1"
+    description: Firm, chewy block-shaped jellies in bright fruity flavours.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   giant-strawberries:
-    name: "Giant Strawberrys"
-    emoji: "🍓"
-    description: "Large, firm strawberry gummies packed with real strawberry flavour."
-    category: "HARD JELLYS"
+    name: Giant Strawberrys
+    emoji: "\U0001F353"
+    description: Large, firm strawberry gummies packed with real strawberry flavour.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   rhubarb-custard-hard:
-    name: "Rhubarb & Custard (Hard)"
-    emoji: "🍬"
-    description: "Hard, tangy rhubarb sweets with a sweet custard undertone."
-    category: "HARD JELLYS"
-
+    name: Rhubarb & Custard (Hard)
+    emoji: "\U0001F36C"
+    description: Hard, tangy rhubarb sweets with a sweet custard undertone.
+    category: HARD JELLYS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-cherry-cola-bottles:
-    name: "Fizzy Cherry Cola Bottles"
-    emoji: "🥤✨"
-    description: "Cherry and cola-flavoured bottles with a fizzy sour coating."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Cherry Cola Bottles
+    emoji: "\U0001F964✨"
+    description: Cherry and cola-flavoured bottles with a fizzy sour coating.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-jelly-mix:
-    name: "Fizzy Jelly Mix"
-    emoji: "🍬✨"
-    description: "Assorted fizzy jellies with a sour outer dusting."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Jelly Mix
+    emoji: "\U0001F36C✨"
+    description: Assorted fizzy jellies with a sour outer dusting.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-tooti-fruity-bottles:
-    name: "Fizzy Tooti Fruity Bottles"
-    emoji: "🥤🍓"
-    description: "Tutti-frutti cola bottles with a tangy, fizzy finish."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Tooti Fruity Bottles
+    emoji: "\U0001F964\U0001F353"
+    description: Tutti-frutti cola bottles with a tangy, fizzy finish.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-cola-bottles:
-    name: "Fizzy Cola Bottles"
-    emoji: "🥤💫"
-    description: "Classic cola bottles with fizzy sugar for a tangy kick."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Cola Bottles
+    emoji: "\U0001F964\U0001F4AB"
+    description: Classic cola bottles with fizzy sugar for a tangy kick.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-bears:
-    name: "Fizzy Bears"
-    emoji: "🐻✨"
-    description: "Soft bear-shaped chews with an energetic fizzy coating."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Bears
+    emoji: "\U0001F43B✨"
+    description: Soft bear-shaped chews with an energetic fizzy coating.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-cherrys:
-    name: "Fizzy Cherrys"
-    emoji: "🍒✨"
-    description: "Cherry-flavoured gummy cherries with a fizzy sugar dusting."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Cherrys
+    emoji: "\U0001F352✨"
+    description: Cherry-flavoured gummy cherries with a fizzy sugar dusting.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   giant-fizzy-cola-bottles:
-    name: "Giant Fizzy Cola Bottles"
-    emoji: "🥤🥤"
-    description: "Oversized cola bottles with a tart fizzy coating — great for sharing."
-    category: "SOFT FIZZY SWEETS"
+    name: Giant Fizzy Cola Bottles
+    emoji: "\U0001F964\U0001F964"
+    description: Oversized cola bottles with a tart fizzy coating — great for sharing.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-fangs:
-    name: "Fizzy Fangs"
-    emoji: "🦷✨"
-    description: "Fang-shaped fizzy chews with a sour sugar finish."
-    category: "SOFT FIZZY SWEETS"
+    name: Fizzy Fangs
+    emoji: "\U0001F9B7✨"
+    description: Fang-shaped fizzy chews with a sour sugar finish.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-mixed-animals:
-    name: "Fizzy Mixed Animals"
-    emoji: "🦁✨"
-    description: "An assortment of animal-shaped fizzy chews in mixed flavours."
-    category: "SOFT FIZZY SWEETS"
-
+    name: Fizzy Mixed Animals
+    emoji: "\U0001F981✨"
+    description: An assortment of animal-shaped fizzy chews in mixed flavours.
+    category: SOFT FIZZY SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   strawberry-milkshakes:
-    name: "Strawberry Milkshakes"
-    emoji: "🥛🍓"
-    description: "Soft, creamy strawberry-flavoured sweets with a milkshake taste."
-    category: "CLASSIC SWEETS"
+    name: Strawberry Milkshakes
+    emoji: "\U0001F95B\U0001F353"
+    description: Soft, creamy strawberry-flavoured sweets with a milkshake taste.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   powdered-teeth:
-    name: "Powdered Teeth"
-    emoji: "🦷"
-    description: "Powdered sugar teeth sweets with an iconic chalky tang."
-    category: "CLASSIC SWEETS"
+    name: Powdered Teeth
+    emoji: "\U0001F9B7"
+    description: Powdered sugar teeth sweets with an iconic chalky tang.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   powdered-milk-bottles:
-    name: "Powdered Milk Bottles"
-    emoji: "🍼"
-    description: "Sweet, powder-coated milk-bottle shaped chews with a creamy flavour."
-    category: "CLASSIC SWEETS"
+    name: Powdered Milk Bottles
+    emoji: "\U0001F37C"
+    description: Sweet, powder-coated milk-bottle shaped chews with a creamy flavour.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   desert-flavoured-pencils:
-    name: "Desert Flavoured Pencils"
+    name: Desert Flavoured Pencils
     emoji: "✏️"
-    description: "Novelty pencil-shaped sweets with dessert-inspired flavours."
-    category: "CLASSIC SWEETS"
+    description: Novelty pencil-shaped sweets with dessert-inspired flavours.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   bananas-and-shrimps:
-    name: "Banannas & Shrimps"
-    emoji: "🍌🦐"
-    description: "A playful mix of banana and shrimp-shaped sweets in fruity flavours."
-    category: "CLASSIC SWEETS"
+    name: Banannas & Shrimps
+    emoji: "\U0001F34C\U0001F990"
+    description: A playful mix of banana and shrimp-shaped sweets in fruity flavours.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   strawberry-bon-bons-pink:
-    name: "Strawberry Bon Bons (Pink)"
-    emoji: "🍬🌸"
-    description: "Pink strawberry bon bons with a soft, creamy centre."
-    category: "CLASSIC SWEETS"
+    name: Strawberry Bon Bons (Pink)
+    emoji: "\U0001F36C\U0001F338"
+    description: Pink strawberry bon bons with a soft, creamy centre.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   raspberry-bon-bons-blue:
-    name: "Raspberry Bon Bons (Blue)"
-    emoji: "🍬💙"
-    description: "Blue raspberry bon bons with a sweet, fruity centre."
-    category: "CLASSIC SWEETS"
+    name: Raspberry Bon Bons (Blue)
+    emoji: "\U0001F36C\U0001F499"
+    description: Blue raspberry bon bons with a sweet, fruity centre.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   toffee-bon-bons-white:
-    name: "Toffee Bon Bons (White)"
-    emoji: "🍬🤎"
-    description: "Creamy toffee bon bons with a smooth, sweet texture."
-    category: "CLASSIC SWEETS"
+    name: Toffee Bon Bons (White)
+    emoji: "\U0001F36C\U0001F90E"
+    description: Creamy toffee bon bons with a smooth, sweet texture.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   flying-saucers:
-    name: "Flying Saucers"
-    emoji: "🛸"
-    description: "Tasting 'wafer' discs filled with sherbet; a fizzy classic."
-    category: "CLASSIC SWEETS"
+    name: Flying Saucers
+    emoji: "\U0001F6F8"
+    description: Tasting 'wafer' discs filled with sherbet; a fizzy classic.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   alphabet-letters:
-    name: "Alphabet Letters"
-    emoji: "🔤"
-    description: "Letter-shaped confectionery, fun for kids and party bags."
-    category: "CLASSIC SWEETS"
+    name: Alphabet Letters
+    emoji: "\U0001F524"
+    description: Letter-shaped confectionery, fun for kids and party bags.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   jelly-babies:
-    name: "Jelly Babies"
-    emoji: "👶"
-    description: "Soft, iconic baby-shaped jelly sweets in assorted flavours."
-    category: "CLASSIC SWEETS"
+    name: Jelly Babies
+    emoji: "\U0001F476"
+    description: Soft, iconic baby-shaped jelly sweets in assorted flavours.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fruit-pastils:
-    name: "Fruit Pastils"
-    emoji: "🍬🌈"
-    description: "Small, chewy fruit-flavoured pastilles with classic taste."
-    category: "CLASSIC SWEETS"
+    name: Fruit Pastils
+    emoji: "\U0001F36C\U0001F308"
+    description: Small, chewy fruit-flavoured pastilles with classic taste.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   teeth-and-toothbrushes:
-    name: "Teeth & ToothBrushes"
-    emoji: "🦷🪥"
-    description: "Novelty teeth and toothbrush shaped sweets — great for themed picks."
-    category: "CLASSIC SWEETS"
+    name: Teeth & ToothBrushes
+    emoji: "\U0001F9B7\U0001FAA5"
+    description: Novelty teeth and toothbrush shaped sweets — great for themed picks.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   american-hard-gums:
-    name: "American Hard Gums"
-    emoji: "🍬💛"
-    description: "Hard, crunchy gum-style sweets with long-lasting flavour."
-    category: "CLASSIC SWEETS"
+    name: American Hard Gums
+    emoji: "\U0001F36C\U0001F49B"
+    description: Hard, crunchy gum-style sweets with long-lasting flavour.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   liquorice-cream-rocks:
-    name: "Liquorice Cream Rocks"
-    emoji: "🪨"
-    description: "Chunky liquorice-coated cream sweets with a deep aniseed taste."
-    category: "CLASSIC SWEETS"
+    name: Liquorice Cream Rocks
+    emoji: "\U0001FAA8"
+    description: Chunky liquorice-coated cream sweets with a deep aniseed taste.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   pink-marshmallow-flumps:
-    name: "Pink Marshmallow Flumps"
-    emoji: "☁️💗"
-    description: "Soft, fluffy pink marshmallow flumps with a melt-in-your-mouth texture."
-    category: "CLASSIC SWEETS"
+    name: Pink Marshmallow Flumps
+    emoji: "☁️\U0001F497"
+    description: Soft, fluffy pink marshmallow flumps with a melt-in-your-mouth texture.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   refreshers:
-    name: "Refreshers"
-    emoji: "✨🍬"
-    description: "Tangy, sherbet-filled chewy sweets — a refreshing classic."
-    category: "CLASSIC SWEETS"
+    name: Refreshers
+    emoji: "✨\U0001F36C"
+    description: Tangy, sherbet-filled chewy sweets — a refreshing classic.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   boiled-sweets-catchall:
-    name: "Boiled Sweets"
-    emoji: "🍭"
-    description: "A mixed bag of traditional boiled sweets in assorted flavours."
-    category: "CLASSIC SWEETS"
-
+    name: Boiled Sweets
+    emoji: "\U0001F36D"
+    description: A mixed bag of traditional boiled sweets in assorted flavours.
+    category: CLASSIC SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   sherbert-lemons:
-    name: "Sherbert Lemons"
-    emoji: "🍋"
-    description: "Hard lemon sweets with a sherbet centre that fizzes on the tongue."
-    category: "BOILED SWEETS"
+    name: Sherbert Lemons
+    emoji: "\U0001F34B"
+    description: Hard lemon sweets with a sherbet centre that fizzes on the tongue.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   chocolate-limes:
-    name: "Chocolate Limes"
-    emoji: "🍫🍋"
-    description: "Retro chocolate-coated lime sweets — tangy and sweet together."
-    category: "BOILED SWEETS"
+    name: Chocolate Limes
+    emoji: "\U0001F36B\U0001F34B"
+    description: Retro chocolate-coated lime sweets — tangy and sweet together.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   fruit-drops:
-    name: "Fruit Drops"
-    emoji: "🍬🌈"
-    description: "Small, hard fruit-flavoured boiled sweets with bright flavours."
-    category: "BOILED SWEETS"
+    name: Fruit Drops
+    emoji: "\U0001F36C\U0001F308"
+    description: Small, hard fruit-flavoured boiled sweets with bright flavours.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   watermelon-jawbreakers-green:
-    name: "Watermelon Jawbreakers (Green)"
-    emoji: "🍉"
-    description: "Large, layered jawbreakers with watermelon flavour."
-    category: "BOILED SWEETS"
+    name: Watermelon Jawbreakers (Green)
+    emoji: "\U0001F349"
+    description: Large, layered jawbreakers with watermelon flavour.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   raspberry-jawbreakers-blue:
-    name: "Raspberry Jawbreakers (Blue)"
-    emoji: "🫐"
-    description: "Blue raspberry jawbreakers with long-lasting flavour."
-    category: "BOILED SWEETS"
+    name: Raspberry Jawbreakers (Blue)
+    emoji: "\U0001FAD0"
+    description: Blue raspberry jawbreakers with long-lasting flavour.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   great-british-mix:
-    name: "Great British Mix"
-    emoji: "🇬🇧"
-    description: "A selection of classic British boiled sweets and favourites."
-    category: "BOILED SWEETS"
+    name: Great British Mix
+    emoji: "\U0001F1EC\U0001F1E7"
+    description: A selection of classic British boiled sweets and favourites.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   aniseed-humbugs:
-    name: "Anaseed Humbugs"
-    emoji: "🍬🌟"
-    description: "Traditional aniseed-flavoured humbugs with a hard shell."
-    category: "BOILED SWEETS"
+    name: Anaseed Humbugs
+    emoji: "\U0001F36C\U0001F31F"
+    description: Traditional aniseed-flavoured humbugs with a hard shell.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   mint-humbugs:
-    name: "Mint Humbugs"
-    emoji: "🌿"
-    description: "Cool mint-flavoured hard sweets with a refreshing finish."
-    category: "BOILED SWEETS"
+    name: Mint Humbugs
+    emoji: "\U0001F33F"
+    description: Cool mint-flavoured hard sweets with a refreshing finish.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   mint-imperials:
-    name: "Mint Impearials"
-    emoji: "🌱"
-    description: "Round mint imperials with a classic, strong mint taste."
-    category: "BOILED SWEETS"
+    name: Mint Impearials
+    emoji: "\U0001F331"
+    description: Round mint imperials with a classic, strong mint taste.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   pear-drops:
-    name: "Pear Drops"
-    emoji: "🍐"
-    description: "Sweet pear-flavoured boiled sweets with a distinct pear aroma."
-    category: "BOILED SWEETS"
+    name: Pear Drops
+    emoji: "\U0001F350"
+    description: Sweet pear-flavoured boiled sweets with a distinct pear aroma.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   cola-cubes:
-    name: "Cola Cubes"
-    emoji: "🔲"
-    description: "Small cube-shaped cola sweets with a fizzy, sweet cola flavour."
-    category: "BOILED SWEETS"
-
+    name: Cola Cubes
+    emoji: "\U0001F532"
+    description: Small cube-shaped cola sweets with a fizzy, sweet cola flavour.
+    category: BOILED SWEETS
+    price: ''
+    og_image: "/image/mix1.png"
   blackjacks:
-    name: "BlackJacks"
+    name: BlackJacks
     emoji: "⬛"
-    description: "Classic black liquorice-flavoured chewy sweets."
-    category: "CHEWS"
+    description: Classic black liquorice-flavoured chewy sweets.
+    category: CHEWS
+    price: ''
+    og_image: "/image/mix1.png"
   fruit-salads:
-    name: "Fruit Salads"
-    emoji: "🍌🍎"
-    description: "Chewy fruit-flavoured cane sweets with a subtle tang."
-    category: "CHEWS"
+    name: Fruit Salads
+    emoji: "\U0001F34C\U0001F34E"
+    description: Chewy fruit-flavoured cane sweets with a subtle tang.
+    category: CHEWS
+    price: ''
+    og_image: "/image/mix1.png"
   sour-torpedos:
-    name: "Sour Torpedos"
-    emoji: "🚀"
-    description: "Soft, sour chews with intense sour sugar coating and fruity centre."
-    category: "CHEWS"
+    name: Sour Torpedos
+    emoji: "\U0001F680"
+    description: Soft, sour chews with intense sour sugar coating and fruity centre.
+    category: CHEWS
+    price: ''
+    og_image: "/image/mix1.png"
   fruit-chews:
-    name: "Fruit Chews"
-    emoji: "🍬😋"
-    description: "Soft, individually wrapped fruit chews in assorted flavours."
-    category: "CHEWS"
-
+    name: Fruit Chews
+    emoji: "\U0001F36C\U0001F60B"
+    description: Soft, individually wrapped fruit chews in assorted flavours.
+    category: CHEWS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-strawberry-pencils:
-    name: "Fizzy Strawberry Pencils"
-    emoji: "✏️🍓"
-    description: "Pencil-shaped chewy strips with fizzy strawberry flavour."
-    category: "BELTS & PENCILS"
+    name: Fizzy Strawberry Pencils
+    emoji: "✏️\U0001F353"
+    description: Pencil-shaped chewy strips with fizzy strawberry flavour.
+    category: BELTS & PENCILS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-strawberry-belts:
-    name: "Fizzy Strawberry Belts"
-    emoji: "🎀🍓"
-    description: "Long, flat fizzy belts with sweet strawberry taste."
-    category: "BELTS & PENCILS"
+    name: Fizzy Strawberry Belts
+    emoji: "\U0001F380\U0001F353"
+    description: Long, flat fizzy belts with sweet strawberry taste.
+    category: BELTS & PENCILS
+    price: ''
+    og_image: "/image/mix1.png"
   fizzy-rainbow-pencils:
-    name: "Fizzy Rainbow Pencils"
-    emoji: "✏️🌈"
-    description: "Rainbow-coloured pencil candies with a fizzy tang."
-    category: "BELTS & PENCILS"
+    name: Fizzy Rainbow Pencils
+    emoji: "✏️\U0001F308"
+    description: Rainbow-coloured pencil candies with a fizzy tang.
+    category: BELTS & PENCILS
+    price: ''
+    og_image: "/image/mix1.png"
   green-energy-pencils:
-    name: "Green Energy Pencils"
+    name: Green Energy Pencils
     emoji: "⚡✏️"
-    description: "Sour green flavoured pencil strips with a zesty kick."
-    category: "BELTS & PENCILS"
+    description: Sour green flavoured pencil strips with a zesty kick.
+    category: BELTS & PENCILS
+    price: ''
+    og_image: "/image/mix1.png"
   strawberry-pencils:
-    name: "Strawberry Pencils"
+    name: Strawberry Pencils
     emoji: "✏️"
-    description: "Classic strawberry-flavoured pencil-shaped candy."
-    category: "BELTS & PENCILS"
-
+    description: Classic strawberry-flavoured pencil-shaped candy.
+    category: BELTS & PENCILS
+    price: ''
+    og_image: "/image/mix1.png"
   chocolate-lollys:
-    name: "Choclate Lollys"
-    emoji: "🍫🍭"
-    description: "Chocolate-coated lollipops for a sweet, creamy treat."
-    category: "LOLLYS"
+    name: Choclate Lollys
+    emoji: "\U0001F36B\U0001F36D"
+    description: Chocolate-coated lollipops for a sweet, creamy treat.
+    category: LOLLYS
+    price: ''
+    og_image: "/image/mix1.png"
   sour-blue-raspberry-lollys:
-    name: "Sour Blue Rasberry Lollys"
-    emoji: "🍭💙"
-    description: "Blue raspberry-flavoured sour lollipops with bold flavour."
-    category: "LOLLYS"
+    name: Sour Blue Rasberry Lollys
+    emoji: "\U0001F36D\U0001F499"
+    description: Blue raspberry-flavoured sour lollipops with bold flavour.
+    category: LOLLYS
+    price: ''
+    og_image: "/image/mix1.png"
   assorted-fruit-lollys:
-    name: "Assorted Fruit Lollys"
-    emoji: "🍭🌈"
-    description: "A mixed pack of fruit-flavoured lollipops in assorted colours."
-    category: "LOLLYS"
+    name: Assorted Fruit Lollys
+    emoji: "\U0001F36D\U0001F308"
+    description: A mixed pack of fruit-flavoured lollipops in assorted colours.
+    category: LOLLYS
+    price: ''
+    og_image: "/image/mix1.png"
   tongue-painter-lollys:
-    name: "Tongue Painter Lollys"
-    emoji: "👅🍭"
-    description: "Lollipops that temporarily colour the tongue in fun hues."
-    category: "LOLLYS"
+    name: Tongue Painter Lollys
+    emoji: "\U0001F445\U0001F36D"
+    description: Lollipops that temporarily colour the tongue in fun hues.
+    category: LOLLYS
+    price: ''
+    og_image: "/image/mix1.png"
