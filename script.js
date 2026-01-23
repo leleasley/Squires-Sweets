@@ -267,11 +267,35 @@ if (carousel) {
     document.addEventListener('DOMContentLoaded', () => {
         createBuilder();
 
-        // Toggle selection by clicking a product card
+        // Handle clicks for adding items from product grid or product detail
         document.body.addEventListener('click', (e) => {
-            const card = e.target.closest('.product-card');
-            if (card) {
-                toggleCard(card);
+            // Click on inline Add button in product grid
+            const addBtn = e.target.closest && e.target.closest('.card-add');
+            if (addBtn) {
+                const card = addBtn.closest('.product-card');
+                if (card) toggleCard(card);
+                return;
+            }
+
+            // Add from product detail "Add to Mix" button
+            const addDetail = e.target.closest && e.target.closest('.add-to-mix');
+            if (addDetail) {
+                const name = addDetail.getAttribute('data-name');
+                if (!name) return;
+                if (selected.indexOf(name) === -1) {
+                    if (selected.length >= MAX_ITEMS) {
+                        alert(`You can only select up to ${MAX_ITEMS} items.`);
+                        return;
+                    }
+                    selected.push(name);
+                }
+                // Visual feedback: mark any matching card selected
+                document.querySelectorAll('.product-card').forEach(c => {
+                    const n = c.querySelector('.product-name');
+                    if (n && n.innerText.trim() === name) c.classList.add('selected');
+                });
+                updateBuilder();
+                return;
             }
         });
 
