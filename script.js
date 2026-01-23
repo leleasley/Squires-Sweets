@@ -286,6 +286,10 @@ if (carousel) {
             if (selected.indexOf(name) > -1) c.classList.add('selected'); else c.classList.remove('selected');
         });
 
+        // Update nav cart count
+        const navCount = document.getElementById('navCartCount');
+        if (navCount) navCount.textContent = selected.length;
+
         // Persist
         saveSelection();
     }
@@ -357,10 +361,57 @@ if (carousel) {
         loadSelection();
         updateBuilder();
         expandIfFlagged();
+        // Update the nav mix/cart count
+        const navCount = document.getElementById('navCartCount');
+        if (navCount) navCount.textContent = selected.length;
+        // Make cart button open the mix
+        const navCartBtn = document.getElementById('navCart');
+        if (navCartBtn) navCartBtn.addEventListener('click', (ev) => {
+            expandBuilder(true);
+            setTimeout(() => document.getElementById('mixToggle')?.classList.add('visible'), 10);
+        });
+
         // If there is a hash target, scroll it into view
         if (location.hash) {
             const el = document.querySelector(location.hash);
             if (el) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
+
+        // Search handler (desktop: filter in-place on /products, otherwise submit to /products?q=)
+        const searchInput = document.getElementById('siteSearch');
+        if (searchInput) {
+            const applyFilter = () => {
+                const q = searchInput.value.trim().toLowerCase();
+                if (location.pathname.includes('/products')) {
+                    document.querySelectorAll('.product-card').forEach(card => {
+                        const name = (card.querySelector('.product-name')?.innerText || '').toLowerCase();
+                        const cat = (card.closest('.category-section')?.querySelector('.category-title')?.innerText || '').toLowerCase();
+                        card.style.display = (name.includes(q) || cat.includes(q) || q === '') ? '' : 'none';
+                    });
+                }
+            };
+
+            // live filter on products page
+            searchInput.addEventListener('input', () => {
+                applyFilter();
+            });
+
+            // submit behavior
+            searchInput.addEventListener('keydown', (ev) => {
+                if (ev.key === 'Enter') {
+                    const q = searchInput.value.trim();
+                    if (!location.pathname.includes('/products')) {
+                        location.href = `/products?q=${encodeURIComponent(q)}`;
+                    }
+                }
+            });
+
+            // if products page has ?q= prefill
+            try {
+                const params = new URLSearchParams(location.search);
+                const q = params.get('q');
+                if (q) { searchInput.value = q; applyFilter(); }
+            } catch (e) {}
         }
 
         // Handle clicks for adding items from product grid or product detail

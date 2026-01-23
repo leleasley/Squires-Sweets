@@ -9,16 +9,31 @@
                 <span class="logo-text brand-font">Squires Sweets</span>
             </a>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+        <div class="nav-center">
+            <div class="nav-search">
+                <input id="siteSearch" type="search" placeholder="Search sweets..." aria-label="Search sweets">
+            </div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="navLinks">
             <span class="hamburger"></span>
         </button>
+
         <div class="nav-links" id="navLinks">
-            <a href="{{ site.baseurl }}/" class="nav-link nav-icon{% if page.url == '/' %} active{% endif %}">🏠 Home</a>
-            <a href="{{ site.baseurl }}/products" class="nav-link nav-icon{% if page.url contains 'products' %} active{% endif %}">🍬 Products</a>
-            <a href="{{ site.baseurl }}/promo" class="nav-link nav-icon{% if page.url contains 'promo' %} active{% endif %}">💰 Special Offer</a>
-            <a href="{{ site.baseurl }}/about" class="nav-link nav-icon{% if page.url contains 'about' %} active{% endif %}">ℹ️ About</a>
-            <a href="{{ site.baseurl }}/contact" class="nav-link nav-icon{% if page.url contains 'contact' %} active{% endif %}">✉️ Contact</a>
-            <a href="https://wa.me/447564230269" target="_blank" rel="noopener noreferrer" class="nav-cta">🍭 Order Now</a>
+            <a href="{{ site.baseurl }}/" class="nav-link nav-icon{% if page.url == '/' %} active{% endif %}">Home</a>
+            <a href="{{ site.baseurl }}/products" class="nav-link nav-icon{% if page.url contains 'products' %} active{% endif %}">Products</a>
+            <a href="{{ site.baseurl }}/promo" class="nav-link nav-icon{% if page.url contains 'promo' %} active{% endif %}">Special Offer</a>
+            <a href="{{ site.baseurl }}/about" class="nav-link nav-icon{% if page.url contains 'about' %} active{% endif %}">About</a>
+            <a href="{{ site.baseurl }}/contact" class="nav-link nav-icon{% if page.url contains 'contact' %} active{% endif %}">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+            <button id="navCart" class="nav-cart" aria-label="View mix">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6h15l-1.5 9h-13z"></path><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle></svg>
+                <span id="navCartCount" class="nav-cart-count">0</span>
+            </button>
+            <a href="https://wa.me/447564230269" target="_blank" rel="noopener noreferrer" class="nav-cta">Order Now</a>
         </div>
     </div>
 </nav>

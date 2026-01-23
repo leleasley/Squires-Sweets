@@ -18,9 +18,9 @@ body {
 
 /* Navigation - Sweet Theme Update */
 .sweet-navbar {
-    background: linear-gradient(90deg, #fbbf24 0%, #ec4899 90%);
-    border-bottom: 4px solid #ec4899;
-    box-shadow: 0 6px 18px -5px rgba(248,164,233,.18);
+    background: linear-gradient(90deg, #fff, #fff);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 18px rgba(3,7,18,0.04);
     position: sticky;
     top: 0;
     z-index: 40;
@@ -33,16 +33,112 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 64px;
+    gap: 12px;
 }
 .nav-logo a {
     display: flex;
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    color: white;
+    color: #111827;
 }
 .nav-logo a:hover {
-    color: #f0f0f0;
+    color: #111827;
+}
+
+/* New center search */
+.nav-center {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+.nav-search {
+    width: min(560px, 60%);
+}
+.nav-search input[type="search"] {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e6e6e9;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    font-size: 0.95rem;
+}
+.nav-search input[type="search"]:focus {
+    outline: 2px solid #fbbf24;
+    border-color: #fbbf24;
+}
+
+/* Compact, flat nav links */
+.nav-links {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+.nav-link,
+.nav-cta {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background .15s, color .12s, box-shadow .12s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+.nav-link {
+    color: #374151;
+    background: transparent;
+    font-weight: 600;
+}
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(251,191,36,0.12);
+    color: #b45309;
+}
+.nav-cta {
+    background: linear-gradient(90deg, #ec4899, #fbbf24);
+    color: #fff;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(249,115,222,0.08);
+}
+.nav-cta:hover { transform: translateY(-1px); }
+
+.nav-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+.nav-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 6px 8px;
+    border-radius: 8px;
+    color: #111827;
+    cursor: pointer;
+}
+.nav-cart-count {
+    display: inline-block;
+    min-width: 20px;
+    background: #fbbf24;
+    color: #111827;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.85rem;
+}
+
+/* mobile adjustments */
+@media (max-width: 768px) {
+    .nav-center { display: none; }
+    .nav-links { display: none; }
+    .nav-actions { gap: 0.4rem; }
+    .mobile-menu-btn { display: block; }
 }
 /* Logo - No background */
 .logo-badge {
