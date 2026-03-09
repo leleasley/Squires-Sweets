@@ -1265,6 +1265,25 @@ body {
     font-size: 0.875rem;
 }
 
+.footer-credit {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #9ca3af;
+    letter-spacing: 0.02em;
+}
+
+.footer-credit a {
+    color: #4a90e2;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-credit a:hover {
+    color: #fbbf24;
+}
+
 /* Floating WhatsApp Button */
 .whatsapp-float {
     position: fixed;
