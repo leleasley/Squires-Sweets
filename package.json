@@ -19,8 +19,7 @@
   "type": "commonjs",
   "lint-staged": {
     "**/*.css": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ]
   },
   "bugs": {
