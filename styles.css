@@ -167,7 +167,7 @@ body {
     box-shadow: none;
     margin-right: 0.5rem;
 }
-#Logo {
+#logo {
     width: 60px;
     height: auto;
     max-width: 100%;
@@ -184,7 +184,6 @@ body {
     font-weight: bold;
     color: inherit;
 }
-.mobile-menu-btn {
 .mobile-menu-btn {
     display: none;
     background: none;
