@@ -83,16 +83,26 @@
 /* Example Mixes Section */
 .example-mixes {
   margin-top: 4rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .images-grid {
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+  justify-content: center;
   justify-items: center;
+}
+
+@media (min-width: 900px) {
+  .images-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .image-card {
