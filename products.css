@@ -65,6 +65,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 100%);
+  box-shadow: 0 2px 8px rgba(251,191,36,0.08);
 }
 
 .product-name {
